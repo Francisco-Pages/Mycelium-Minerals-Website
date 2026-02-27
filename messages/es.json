@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "investorRelations": "Relaciones con Inversionistas",
+    "about": "Nosotros",
+    "sustainability": "Sostenibilidad",
+    "news": "Noticias y Medios",
+    "careers": "Empleos",
+    "contact": "Contacto"
+  },
+  "common": {
+    "learnMore": "Más Información",
+    "viewAll": "Ver Todo",
+    "downloadPdf": "Descargar PDF",
+    "comingSoon": "Próximamente",
+    "contactUs": "Contáctenos",
+    "investorPortal": "Portal de Inversionistas",
+    "readMore": "Leer Más"
+  },
+  "home": {
+    "heroTitle": "Producción de Oro y Plata en Bolivia",
+    "heroSubtitle": "Un productor de metales preciosos cotizado en la TSX con una cartera de activos en producción en Sudamérica.",
+    "ctaPrimary": "Ver Nuestros Proyectos",
+    "ctaSecondary": "Relaciones con Inversionistas"
+  },
+  "projects": {
+    "title": "Nuestros Proyectos",
+    "subtitle": "Una cartera de activos de oro y plata en Bolivia.",
+    "stage": "Etapa",
+    "commodity": "Mineral",
+    "location": "Ubicación"
+  },
+  "investorRelations": {
+    "title": "Relaciones con Inversionistas",
+    "subtitle": "Informes financieros, presentaciones e información para accionistas."
+  },
+  "about": {
+    "title": "Sobre Mycelium Minerals",
+    "subtitle": "Liderazgo, valores y nuestro compromiso con la minería responsable.",
+    "team": "Equipo Ejecutivo",
+    "board": "Junta Directiva"
+  },
+  "sustainability": {
+    "title": "Sostenibilidad y ESG",
+    "subtitle": "Nuestro compromiso con las personas, el medio ambiente y las operaciones responsables."
+  },
+  "news": {
+    "title": "Noticias y Medios",
+    "subtitle": "Comunicados de prensa, cobertura mediática y actualizaciones corporativas."
+  },
+  "careers": {
+    "title": "Empleos",
+    "subtitle": "Únase a nuestro equipo y contribuya a la minería responsable en Bolivia."
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "Póngase en contacto con nuestro equipo.",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "success": "Su mensaje ha sido enviado. Nos pondremos en contacto pronto.",
+    "error": "Algo salió mal. Por favor intente de nuevo."
+  },
+  "footer": {
+    "disclaimer": "Este sitio web contiene declaraciones prospectivas. Los resultados reales pueden diferir materialmente de los proyectados.",
+    "copyright": "© {year} Mycelium Minerals Inc. Todos los derechos reservados.",
+    "exchange": "Cotiza en la Bolsa de Valores de Toronto (TSX)"
+  }
+}

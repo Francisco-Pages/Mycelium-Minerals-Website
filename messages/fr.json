@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "projects": "Projets",
+    "investorRelations": "Relations Investisseurs",
+    "about": "À Propos",
+    "sustainability": "Durabilité",
+    "news": "Actualités & Médias",
+    "careers": "Carrières",
+    "contact": "Contact"
+  },
+  "common": {
+    "learnMore": "En Savoir Plus",
+    "viewAll": "Voir Tout",
+    "downloadPdf": "Télécharger PDF",
+    "comingSoon": "Bientôt Disponible",
+    "contactUs": "Nous Contacter",
+    "investorPortal": "Portail Investisseurs",
+    "readMore": "Lire la Suite"
+  },
+  "home": {
+    "heroTitle": "Production d'Or et d'Argent en Bolivie",
+    "heroSubtitle": "Un producteur de métaux précieux coté à la TSX avec un portefeuille d'actifs en production en Amérique du Sud.",
+    "ctaPrimary": "Voir Nos Projets",
+    "ctaSecondary": "Relations Investisseurs"
+  },
+  "projects": {
+    "title": "Nos Projets",
+    "subtitle": "Un portefeuille d'actifs aurifères et argentifères en Bolivie.",
+    "stage": "Stade",
+    "commodity": "Matière Première",
+    "location": "Emplacement"
+  },
+  "investorRelations": {
+    "title": "Relations Investisseurs",
+    "subtitle": "Rapports financiers, présentations et informations aux actionnaires."
+  },
+  "about": {
+    "title": "À Propos de Mycelium Minerals",
+    "subtitle": "Direction, valeurs et notre engagement envers une exploitation minière responsable.",
+    "team": "Équipe de Direction",
+    "board": "Conseil d'Administration"
+  },
+  "sustainability": {
+    "title": "Durabilité & ESG",
+    "subtitle": "Notre engagement envers les personnes, l'environnement et des opérations responsables."
+  },
+  "news": {
+    "title": "Actualités & Médias",
+    "subtitle": "Communiqués de presse, couverture médiatique et mises à jour de l'entreprise."
+  },
+  "careers": {
+    "title": "Carrières",
+    "subtitle": "Rejoignez notre équipe et contribuez à une exploitation minière responsable en Bolivie."
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "subtitle": "Prenez contact avec notre équipe.",
+    "name": "Nom",
+    "email": "Courriel",
+    "subject": "Sujet",
+    "message": "Message",
+    "send": "Envoyer le Message",
+    "success": "Votre message a été envoyé. Nous vous contacterons sous peu.",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "footer": {
+    "disclaimer": "Ce site contient des déclarations prospectives. Les résultats réels peuvent différer sensiblement de ceux projetés.",
+    "copyright": "© {year} Mycelium Minerals Inc. Tous droits réservés.",
+    "exchange": "Coté à la Bourse de Toronto (TSX)"
+  }
+}

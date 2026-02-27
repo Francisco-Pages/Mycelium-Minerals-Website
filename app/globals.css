@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* ── Brand Design Tokens ─────────────────────────────────────────────────── */
+
+@theme {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-obsidian: #0a0a0a;
+  --color-offwhite: #f5f4f0;
+  --color-gold: #d4a853;
+  --color-green: #2d6a4f;
+  --color-copper: #b55a2b;
+  --color-alert-red: #c0392b;
+
+  /* Typography */
+  --font-clash: "Clash Display", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Courier New", monospace;
+
+  /* Border radius — sharp corners by default */
+  --radius: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-full: 0px;
+
+  /* Custom border width */
+  --border-width-1\.5: 1.5px;
+}
+
+/* ── Clash Display font (download from fontshare.com) ─────────────────────
+   Place font files in /public/fonts/ and uncomment the @font-face below.
+   ────────────────────────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Variable.woff2") format("woff2-variations");
+  font-weight: 200 700;
+  font-display: swap;
+}
+
+/* ── Base Styles ─────────────────────────────────────────────────────────── */
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0a0a0a;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default border radius from all interactive elements */
+button,
+input,
+select,
+textarea,
+[class*="rounded"] {
+  border-radius: 0 !important;
+}

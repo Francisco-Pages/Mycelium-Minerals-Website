@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "investorRelations": "Investor Relations",
+    "about": "About",
+    "sustainability": "Sustainability",
+    "news": "News & Media",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "downloadPdf": "Download PDF",
+    "comingSoon": "Coming Soon",
+    "contactUs": "Contact Us",
+    "investorPortal": "Investor Portal",
+    "readMore": "Read More"
+  },
+  "home": {
+    "heroTitle": "Gold & Silver Production in Bolivia",
+    "heroSubtitle": "A TSX-listed precious metals producer with a portfolio of producing assets in South America.",
+    "ctaPrimary": "View Our Projects",
+    "ctaSecondary": "Investor Relations"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "A portfolio of gold and silver assets across Bolivia.",
+    "stage": "Stage",
+    "commodity": "Commodity",
+    "location": "Location"
+  },
+  "investorRelations": {
+    "title": "Investor Relations",
+    "subtitle": "Financial reports, presentations, and shareholder information."
+  },
+  "about": {
+    "title": "About Mycelium Minerals",
+    "subtitle": "Leadership, values, and our commitment to responsible mining.",
+    "team": "Executive Team",
+    "board": "Board of Directors"
+  },
+  "sustainability": {
+    "title": "Sustainability & ESG",
+    "subtitle": "Our commitment to people, environment, and responsible operations."
+  },
+  "news": {
+    "title": "News & Media",
+    "subtitle": "Press releases, media coverage, and corporate updates."
+  },
+  "careers": {
+    "title": "Careers",
+    "subtitle": "Join our team and contribute to responsible mining in Bolivia."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Your message has been sent. We will be in touch shortly.",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "disclaimer": "This website contains forward-looking statements. Actual results may differ materially from those projected.",
+    "copyright": "© {year} Mycelium Minerals Inc. All rights reserved.",
+    "exchange": "Listed on the Toronto Stock Exchange (TSX)"
+  }
+}
