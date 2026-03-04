@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import Card from '@/components/ui/Card';
 import { ButtonLink } from '@/components/ui/Button';
+import { FadeInView } from '@/components/ui/FadeInView';
 
 export default async function HomePage({
   params,
@@ -85,8 +86,10 @@ function HomePageContent() {
     <div>
       <HeroSection t={t} />
       <MetricsBar t={t} />
+      <ProblemSolutionSection t={t} />
       <ProjectsGrid t={t} />
       <LatestNews t={t} />
+      <BoliviaPanel t={t} />
       <ESGTeaser t={t} />
       <IRBand t={t} />
       <ContactCTABand t={t} />
@@ -101,27 +104,35 @@ function HomePageContent() {
 function HeroSection({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
   return (
     <section className="min-h-[85vh] flex flex-col items-center justify-center px-6 py-24 border-b border-obsidian text-center">
-      <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
-        {t('irBandTicker')} · Gold &amp; Silver · Bolivia
-      </p>
-      <h1 className="text-6xl md:text-8xl font-clash font-bold text-obsidian max-w-5xl leading-tight">
-        {t('heroTitle')}
-      </h1>
-      <p className="mt-6 text-lg text-obsidian/70 max-w-2xl">{t('heroSubtitle')}</p>
-      <div className="mt-10 flex gap-4 flex-wrap justify-center">
-        <ButtonLink href="/projects" variant="primary" size="lg">
-          {t('ctaPrimary')}
-        </ButtonLink>
-        <ButtonLink href="/investor-relations" variant="secondary" size="lg">
-          {t('ctaSecondary')}
-        </ButtonLink>
-      </div>
+      <FadeInView>
+        <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
+          {t('irBandTicker')} · Gold &amp; Silver · Bolivia
+        </p>
+      </FadeInView>
+      <FadeInView delay={0.1}>
+        <h1 className="text-6xl md:text-8xl font-clash font-bold text-obsidian max-w-5xl leading-tight">
+          {t('heroTitle')}
+        </h1>
+      </FadeInView>
+      <FadeInView delay={0.2}>
+        <p className="mt-6 text-lg text-obsidian/70 max-w-2xl">{t('heroSubtitle')}</p>
+      </FadeInView>
+      <FadeInView delay={0.3}>
+        <div className="mt-10 flex gap-4 flex-wrap justify-center">
+          <ButtonLink href="/projects" variant="primary" size="lg">
+            {t('ctaPrimary')}
+          </ButtonLink>
+          <ButtonLink href="/investor-relations" variant="secondary" size="lg">
+            {t('ctaSecondary')}
+          </ButtonLink>
+        </div>
+      </FadeInView>
     </section>
   );
 }
 
 // ---------------------------------------------------------------------------
-// 2. Metrics Bar
+// 2. Metrics Bar — dark background, large gold numbers
 // ---------------------------------------------------------------------------
 
 function MetricsBar({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
@@ -133,35 +144,92 @@ function MetricsBar({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
   ];
 
   return (
-    <section className="bg-offwhite border-b border-obsidian">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <p className="text-xs font-mono uppercase tracking-widest text-obsidian/40 mb-8 text-center">
-          {t('metricsEyebrow')}
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-4">
-          {metrics.map((metric, i) => (
-            <div
-              key={metric.label}
-              className={`flex flex-col items-center py-6 px-4 ${
-                i < metrics.length - 1 ? 'border-r border-obsidian/20' : ''
-              }`}
-            >
-              <span className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
-                {metric.value}
-              </span>
-              <span className="mt-2 text-xs font-mono uppercase tracking-widest text-obsidian/50">
-                {metric.label}
-              </span>
-            </div>
-          ))}
-        </div>
+    <section className="bg-obsidian border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <FadeInView>
+          <p className="text-xs font-mono uppercase tracking-widest text-white/30 mb-10 text-center">
+            {t('metricsEyebrow')}
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {metrics.map((metric, i) => (
+              <div
+                key={metric.label}
+                className={`flex flex-col items-center py-6 px-4 ${
+                  i < metrics.length - 1 ? 'border-r border-white/10' : ''
+                }`}
+              >
+                <span className="font-clash font-bold text-6xl md:text-8xl text-gold leading-none tabular-nums">
+                  {metric.value}
+                </span>
+                <span className="mt-4 text-sm font-mono font-bold uppercase tracking-widest text-white/60">
+                  {metric.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </FadeInView>
       </div>
     </section>
   );
 }
 
 // ---------------------------------------------------------------------------
-// 3. Projects Grid
+// 3. Problem / Solution — full-bleed split panel
+// ---------------------------------------------------------------------------
+
+function ProblemSolutionSection({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
+  return (
+    <section className="border-b border-obsidian overflow-hidden">
+      <div className="grid md:grid-cols-2 min-h-[480px]">
+        {/* Left: The Problem */}
+        <FadeInView
+          direction="left"
+          className="bg-white px-8 md:px-16 py-20 flex flex-col justify-center border-r border-obsidian/10"
+        >
+          <p className="text-xs font-mono uppercase tracking-widest text-obsidian/30 mb-8">
+            {t('problemEyebrow')}
+          </p>
+          <div className="mb-6">
+            <span className="font-clash font-bold text-8xl md:text-[9rem] text-obsidian leading-none block">
+              {t('problemStat')}
+            </span>
+            <p className="mt-3 text-sm text-obsidian/50 max-w-xs leading-relaxed">
+              {t('problemStatLabel')}
+            </p>
+          </div>
+          <p className="text-base text-obsidian/70 max-w-md leading-relaxed">
+            {t('problemBody')}
+          </p>
+        </FadeInView>
+
+        {/* Right: The Solution */}
+        <FadeInView
+          direction="right"
+          className="bg-obsidian px-8 md:px-16 py-20 flex flex-col justify-center"
+        >
+          <p className="text-xs font-mono uppercase tracking-widest text-gold mb-8">
+            {t('solutionEyebrow')}
+          </p>
+          <h2 className="font-clash font-bold text-4xl md:text-6xl text-white leading-tight mb-6">
+            {t('solutionTitle')}
+          </h2>
+          <p className="text-base text-white/60 max-w-md leading-relaxed mb-10">
+            {t('solutionBody')}
+          </p>
+          <Link
+            href="/projects"
+            className="text-sm font-mono font-medium text-gold hover:text-white transition-colors"
+          >
+            {t('solutionCta')} →
+          </Link>
+        </FadeInView>
+      </div>
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// 4. Projects Grid
 // ---------------------------------------------------------------------------
 
 function ProjectsGrid({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
@@ -171,42 +239,46 @@ function ProjectsGrid({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) 
     <section className="bg-white border-b border-obsidian">
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Section header */}
-        <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
-          <div>
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
-              {t('projectsSectionTitle')}
-            </h2>
-            <p className="mt-2 text-sm text-obsidian/60">{t('projectsSectionSubtitle')}</p>
+        <FadeInView>
+          <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
+            <div>
+              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+                {t('projectsSectionTitle')}
+              </h2>
+              <p className="mt-2 text-sm text-obsidian/60">{t('projectsSectionSubtitle')}</p>
+            </div>
+            <Link
+              href="/projects"
+              className="text-sm font-mono font-medium text-obsidian hover:text-gold transition-colors whitespace-nowrap ml-8"
+            >
+              {t('projectsViewAll')} →
+            </Link>
           </div>
-          <Link
-            href="/projects"
-            className="text-sm font-mono font-medium text-obsidian hover:text-gold transition-colors whitespace-nowrap ml-8"
-          >
-            {t('projectsViewAll')} →
-          </Link>
-        </div>
+        </FadeInView>
 
-        {/* 2×2 card grid — zero gap so borders touch */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-obsidian">
-          {PROJECTS.map((project) => (
-            <Card
-              key={project.slug}
-              title={project.title}
-              stage={project.stage}
-              commodities={[...project.commodities]}
-              location={project.location}
-              href={`/projects/${project.slug}`}
-              className="border-0 border-b border-r border-obsidian/20"
-            />
-          ))}
-        </div>
+        {/* 2×2 card grid */}
+        <FadeInView delay={0.1}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-obsidian">
+            {PROJECTS.map((project) => (
+              <Card
+                key={project.slug}
+                title={project.title}
+                stage={project.stage}
+                commodities={[...project.commodities]}
+                location={project.location}
+                href={`/projects/${project.slug}`}
+                className="border-0 border-b border-r border-obsidian/20"
+              />
+            ))}
+          </div>
+        </FadeInView>
       </div>
     </section>
   );
 }
 
 // ---------------------------------------------------------------------------
-// 4. Latest News
+// 5. Latest News
 // ---------------------------------------------------------------------------
 
 function LatestNews({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
@@ -216,42 +288,93 @@ function LatestNews({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
     <section className="bg-offwhite border-b border-obsidian">
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Section header */}
-        <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
-          <div>
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
-              {t('newsSectionTitle')}
-            </h2>
-            <p className="mt-2 text-sm text-obsidian/60">{t('newsSectionSubtitle')}</p>
+        <FadeInView>
+          <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
+            <div>
+              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+                {t('newsSectionTitle')}
+              </h2>
+              <p className="mt-2 text-sm text-obsidian/60">{t('newsSectionSubtitle')}</p>
+            </div>
+            <Link
+              href="/news"
+              className="text-sm font-mono font-medium text-obsidian hover:text-gold transition-colors whitespace-nowrap ml-8"
+            >
+              {t('newsViewAll')} →
+            </Link>
           </div>
-          <Link
-            href="/news"
-            className="text-sm font-mono font-medium text-obsidian hover:text-gold transition-colors whitespace-nowrap ml-8"
-          >
-            {t('newsViewAll')} →
-          </Link>
-        </div>
+        </FadeInView>
 
         {/* 3-column news cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-obsidian">
-          {NEWS.map((article) => (
-            <article
-              key={article.slug}
-              className="border-b border-r border-obsidian/20 bg-white p-6 flex flex-col gap-4 group hover:bg-offwhite transition-colors"
-            >
-              <time className="text-xs font-mono text-obsidian/40 uppercase tracking-widest">
-                {article.date}
-              </time>
-              <h3 className="font-clash font-bold text-lg text-obsidian leading-tight group-hover:text-gold transition-colors">
-                {article.title}
-              </h3>
-              <p className="text-sm text-obsidian/70 leading-relaxed flex-1">{article.excerpt}</p>
-              <Link
-                href={`/news/${article.slug}`}
-                className="text-xs font-mono text-obsidian/40 group-hover:text-gold transition-colors mt-auto pt-4 border-t border-obsidian/10 inline-block"
+        <FadeInView delay={0.1}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-obsidian">
+            {NEWS.map((article) => (
+              <article
+                key={article.slug}
+                className="border-b border-r border-obsidian/20 bg-white p-6 flex flex-col gap-4 group hover:bg-offwhite transition-colors"
               >
-                {t('newsReadMore')} →
-              </Link>
-            </article>
+                <time className="text-xs font-mono text-obsidian/40 uppercase tracking-widest">
+                  {article.date}
+                </time>
+                <h3 className="font-clash font-bold text-lg text-obsidian leading-tight group-hover:text-gold transition-colors">
+                  {article.title}
+                </h3>
+                <p className="text-sm text-obsidian/70 leading-relaxed flex-1">{article.excerpt}</p>
+                <Link
+                  href={`/news/${article.slug}`}
+                  className="text-xs font-mono text-obsidian/40 group-hover:text-gold transition-colors mt-auto pt-4 border-t border-obsidian/10 inline-block"
+                >
+                  {t('newsReadMore')} →
+                </Link>
+              </article>
+            ))}
+          </div>
+        </FadeInView>
+      </div>
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// 6. Bolivia Panel — geographic footprint stats
+// ---------------------------------------------------------------------------
+
+function BoliviaPanel({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
+  const stats = [
+    { value: t('boliviaStat1Value'), label: t('boliviaStat1Label') },
+    { value: t('boliviaStat2Value'), label: t('boliviaStat2Label') },
+    { value: t('boliviaStat3Value'), label: t('boliviaStat3Label') },
+    { value: t('boliviaStat4Value'), label: t('boliviaStat4Label') },
+  ];
+
+  return (
+    <section className="bg-white border-b border-obsidian">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <FadeInView>
+          <p className="text-xs font-mono uppercase tracking-widest text-gold mb-4">
+            {t('boliviaEyebrow')}
+          </p>
+          <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian max-w-xl leading-tight mb-14">
+            {t('boliviaTitle')}
+          </h2>
+        </FadeInView>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-obsidian">
+          {stats.map((stat, i) => (
+            <FadeInView
+              key={stat.label}
+              delay={i * 0.09}
+              className={`flex flex-col p-8 bg-offwhite ${
+                i < stats.length - 1 ? 'border-r border-obsidian/20' : ''
+              }`}
+            >
+              <span className="font-mono font-bold text-4xl md:text-5xl text-obsidian tabular-nums leading-none">
+                {stat.value}
+              </span>
+              <span className="mt-4 text-xs font-mono uppercase tracking-widest text-obsidian/40 leading-relaxed">
+                {stat.label}
+              </span>
+            </FadeInView>
           ))}
         </div>
       </div>
@@ -260,7 +383,7 @@ function LatestNews({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
 }
 
 // ---------------------------------------------------------------------------
-// 5. ESG Teaser
+// 7. ESG Teaser
 // ---------------------------------------------------------------------------
 
 function ESGTeaser({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
@@ -273,48 +396,54 @@ function ESGTeaser({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
   return (
     <section className="bg-obsidian border-b border-obsidian text-white">
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
-          Sustainability &amp; ESG
-        </p>
-        <h2 className="font-clash font-bold text-4xl md:text-5xl text-white max-w-3xl leading-tight">
-          {t('esgSectionTitle')}
-        </h2>
-        <p className="mt-6 text-base text-white/60 max-w-2xl leading-relaxed">
-          {t('esgSectionSubtitle')}
-        </p>
+        <FadeInView>
+          <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
+            Sustainability &amp; ESG
+          </p>
+          <h2 className="font-clash font-bold text-4xl md:text-5xl text-white max-w-3xl leading-tight">
+            {t('esgSectionTitle')}
+          </h2>
+          <p className="mt-6 text-base text-white/60 max-w-2xl leading-relaxed">
+            {t('esgSectionSubtitle')}
+          </p>
+        </FadeInView>
 
         {/* Pillar stats */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
-          {stats.map((stat, i) => (
-            <div
-              key={stat.label}
-              className={`flex flex-col items-center py-10 px-8 ${
-                i < stats.length - 1 ? 'border-b md:border-b-0 md:border-r border-white/10' : ''
-              }`}
-            >
-              <span className="font-clash font-bold text-5xl text-gold">{stat.value}</span>
-              <span className="mt-3 text-xs font-mono uppercase tracking-widest text-white/50">
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </div>
+        <FadeInView delay={0.15}>
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
+            {stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`flex flex-col items-center py-10 px-8 ${
+                  i < stats.length - 1 ? 'border-b md:border-b-0 md:border-r border-white/10' : ''
+                }`}
+              >
+                <span className="font-clash font-bold text-5xl text-gold">{stat.value}</span>
+                <span className="mt-3 text-xs font-mono uppercase tracking-widest text-white/50">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </FadeInView>
 
-        <div className="mt-10">
-          <Link
-            href="/sustainability"
-            className="text-sm font-mono font-medium text-gold hover:text-white transition-colors"
-          >
-            {t('esgCta')} →
-          </Link>
-        </div>
+        <FadeInView delay={0.25}>
+          <div className="mt-10">
+            <Link
+              href="/sustainability"
+              className="text-sm font-mono font-medium text-gold hover:text-white transition-colors"
+            >
+              {t('esgCta')} →
+            </Link>
+          </div>
+        </FadeInView>
       </div>
     </section>
   );
 }
 
 // ---------------------------------------------------------------------------
-// 6. IR Band
+// 8. IR Band
 // ---------------------------------------------------------------------------
 
 function IRBand({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
@@ -351,7 +480,7 @@ function IRBand({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
 }
 
 // ---------------------------------------------------------------------------
-// 7. Contact CTA Band
+// 9. Contact CTA Band
 // ---------------------------------------------------------------------------
 
 function ContactCTABand({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
@@ -359,17 +488,17 @@ function ContactCTABand({ t }: { t: ReturnType<typeof useTranslations<'home'>> }
     <section className="bg-white border-t border-obsidian">
       <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left: headline + subtext */}
-        <div className="max-w-lg">
+        <FadeInView direction="left" className="max-w-lg">
           <h2 className="font-clash font-bold text-3xl md:text-4xl text-obsidian leading-tight">
             {t('contactBandTitle')}
           </h2>
           <p className="mt-3 text-sm text-obsidian/60 leading-relaxed">
             {t('contactBandSubtitle')}
           </p>
-        </div>
+        </FadeInView>
 
         {/* Right: email + CTA */}
-        <div className="flex flex-col items-start md:items-end gap-4">
+        <FadeInView direction="right" className="flex flex-col items-start md:items-end gap-4">
           <a
             href={`mailto:${t('contactBandEmail')}`}
             className="font-mono text-base text-obsidian hover:text-gold transition-colors"
@@ -379,7 +508,7 @@ function ContactCTABand({ t }: { t: ReturnType<typeof useTranslations<'home'>> }
           <ButtonLink href="/contact" variant="secondary" size="md">
             {t('contactBandCta')}
           </ButtonLink>
-        </div>
+        </FadeInView>
       </div>
     </section>
   );
