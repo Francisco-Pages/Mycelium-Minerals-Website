@@ -55,8 +55,48 @@ export default defineType({
     }),
     defineField({
       name: 'location',
-      title: 'Location (Bolivia Department)',
+      title: 'Location (Province, Department)',
       type: 'string',
+    }),
+    defineField({
+      name: 'concessionCode',
+      title: 'Concession Unique Code',
+      type: 'string',
+      description: 'e.g. 2058709',
+    }),
+    defineField({
+      name: 'operator',
+      title: 'Operator Legal Entity',
+      type: 'string',
+      description: 'e.g. Mycelium Minerals Bolivia MMB S.R.L.',
+    }),
+    defineField({
+      name: 'areaHectares',
+      title: 'Area (hectares)',
+      type: 'number',
+    }),
+    defineField({
+      name: 'areaUnits',
+      title: 'Area (cuadrículas)',
+      type: 'number',
+    }),
+    defineField({
+      name: 'permitStatus',
+      title: 'Permit / Contract Status',
+      type: 'string',
+      description: 'e.g. "LPE Application Pending" or "30-Year Contract (2019)"',
+    }),
+    defineField({
+      name: 'explorationBudget',
+      title: 'Exploration Budget (USD)',
+      type: 'string',
+      description: 'e.g. "$365,649 USD — 5-Year Program"',
+    }),
+    defineField({
+      name: 'drillProgram',
+      title: 'Drill Program',
+      type: 'string',
+      description: 'e.g. "1,500 m diamond drill program"',
     }),
     defineField({
       name: 'mapCoordinates',

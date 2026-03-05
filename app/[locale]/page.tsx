@@ -22,56 +22,49 @@ export default async function HomePage({
 
 const PROJECTS = [
   {
-    title: 'Cerro Blanco',
-    stage: 'Production',
-    commodities: ['Gold', 'Silver'],
-    location: 'Oruro Department',
-    slug: 'cerro-blanco',
-  },
-  {
-    title: 'San Cristóbal Norte',
-    stage: 'Development',
-    commodities: ['Silver'],
-    location: 'Potosí Department',
-    slug: 'san-cristobal-norte',
-  },
-  {
-    title: 'Río Mulatos',
-    stage: 'Production',
-    commodities: ['Gold'],
-    location: 'La Paz Department',
-    slug: 'rio-mulatos',
-  },
-  {
-    title: 'Colquiri Sur',
+    title: 'Los Clavillos',
     stage: 'Exploration',
-    commodities: ['Silver', 'Zinc'],
-    location: 'Cochabamba Department',
-    slug: 'colquiri-sur',
+    commodities: ['Gold'],
+    location: 'Ñuflo de Chávez, Santa Cruz',
+    slug: 'los-clavillos',
+  },
+  {
+    title: 'Cerrito XXI',
+    stage: 'Exploration',
+    commodities: ['Gold'],
+    location: 'Ñuflo de Chávez, Santa Cruz',
+    slug: 'cerrito-xxi',
+  },
+  {
+    title: 'Cerrito XXII',
+    stage: 'Exploration',
+    commodities: ['Gold'],
+    location: 'Ñuflo de Chávez, Santa Cruz',
+    slug: 'cerrito-xxii',
   },
 ] as const;
 
 const NEWS = [
   {
-    date: 'February 18, 2025',
-    title: 'Mycelium Minerals Reports Record Q4 2024 Gold Production of 34,200 oz',
+    date: 'February 2025',
+    title: 'Mycelium Minerals Submits 10th Annual Environmental Monitoring Report for Los Clavillos',
     excerpt:
-      'Fourth-quarter output surpassed guidance by 8%, driven by improved mill throughput at Cerro Blanco and Río Mulatos.',
-    slug: 'q4-2024-production-results',
+      "The Company's Los Clavillos project maintains its DIA environmental permit in good standing, with 2025 water and air quality monitoring completed by PetroLab and reported to Bolivia's Ministry of Mining.",
+    slug: 'ima-2025',
   },
   {
-    date: 'January 30, 2025',
-    title: 'Mycelium Minerals Closes $45M Credit Facility to Fund Expansion',
+    date: 'January 2025',
+    title: 'Diamond Drill Program Commences at Los Clavillos, Santa Cruz',
     excerpt:
-      'The revolving credit facility provides capital flexibility to advance the San Cristóbal Norte development program through 2026.',
-    slug: 'credit-facility-2025',
+      'The 2025 exploration program at Los Clavillos is underway, with an Ingetrol Explorer diamond drill rig targeting reserve definition in the open-pit zone alongside soil prospection and trenching campaigns.',
+    slug: 'los-clavillos-drilling-2025',
   },
   {
-    date: 'January 9, 2025',
-    title: 'Mycelium Minerals Announces 2025 Production Guidance and Capital Budget',
+    date: 'December 2024',
+    title: 'Work Plans Filed for Cerrito XXI and Cerrito XXII Gold Concessions',
     excerpt:
-      'The Company guides 120,000–130,000 oz Au equivalent for 2025, with a sustaining capital budget of $28M across all operating sites.',
-    slug: '2025-guidance',
+      '5-year exploration programs totaling approximately $738,000 USD have been submitted for the two new concessions in Concepción, Ñuflo de Chávez — including 1,500 m and 2,000 m diamond drill programs respectively.',
+    slug: 'cerrito-work-plans',
   },
 ] as const;
 

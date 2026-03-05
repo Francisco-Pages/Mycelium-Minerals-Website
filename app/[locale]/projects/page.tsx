@@ -20,32 +20,25 @@ export default async function ProjectsPage({
 
 const PROJECTS = [
   {
-    title: 'Cerro Blanco',
-    stage: 'Production',
-    commodities: ['Gold', 'Silver'],
-    location: 'Oruro Department',
-    slug: 'cerro-blanco',
-  },
-  {
-    title: 'San Cristóbal Norte',
-    stage: 'Development',
-    commodities: ['Silver'],
-    location: 'Potosí Department',
-    slug: 'san-cristobal-norte',
-  },
-  {
-    title: 'Río Mulatos',
-    stage: 'Production',
-    commodities: ['Gold'],
-    location: 'La Paz Department',
-    slug: 'rio-mulatos',
-  },
-  {
-    title: 'Colquiri Sur',
+    title: 'Los Clavillos',
     stage: 'Exploration',
-    commodities: ['Silver', 'Zinc'],
-    location: 'Cochabamba Department',
-    slug: 'colquiri-sur',
+    commodities: ['Gold'],
+    location: 'Ñuflo de Chávez, Santa Cruz',
+    slug: 'los-clavillos',
+  },
+  {
+    title: 'Cerrito XXI',
+    stage: 'Exploration',
+    commodities: ['Gold'],
+    location: 'Ñuflo de Chávez, Santa Cruz',
+    slug: 'cerrito-xxi',
+  },
+  {
+    title: 'Cerrito XXII',
+    stage: 'Exploration',
+    commodities: ['Gold'],
+    location: 'Ñuflo de Chávez, Santa Cruz',
+    slug: 'cerrito-xxii',
   },
 ] as const;
 
