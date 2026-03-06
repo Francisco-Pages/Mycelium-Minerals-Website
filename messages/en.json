@@ -98,7 +98,14 @@
     "annualProduction": "Program Budget",
     "resources": "Drill Program",
     "projectArea": "Project Area",
-    "operatingSince": "Permit Status"
+    "operatingSince": "Permit Status",
+    "drillResultsTitle": "Drill Results",
+    "drillResultsNote": "Full assay tables and drill logs available in the technical reports below.",
+    "anchorOverview": "Overview",
+    "anchorDrillResults": "Drill Results",
+    "anchorLocation": "Location",
+    "anchorDocuments": "Documents",
+    "downloadPrimaryReport": "Download Technical Report"
   },
   "investorRelations": {
     "title": "Investor Relations",
@@ -148,7 +155,33 @@
     "investmentUse2": "Certified laboratory assays",
     "investmentUse3": "Geological modeling",
     "investmentUse4": "Initial resource estimation",
-    "investmentCta": "Contact Our IR Team"
+    "investmentCta": "Contact Our IR Team",
+    "credibilityLine": "15+ years of operating experience in Bolivia, since 2011.",
+    "marketDataEyebrow": "Live Market Data",
+    "marketDataSubtitle": "Gold, silver, and copper spot prices — updated in real time.",
+    "whyBoliviaEyebrow": "Why Bolivia?",
+    "whyBoliviaTitle": "A Proven Mining Jurisdiction",
+    "whyBoliviaSubtitle": "Bolivia's eastern lowlands host a prolific extension of the Brazilian Precambrian Shield — the same geological terrane responsible for multi-million-ounce gold camps across the continent.",
+    "whyBolivia1Title": "World-Class Geology",
+    "whyBolivia1Desc": "The Brazilian Precambrian Shield in Santa Cruz hosts orogenic gold systems analogous to producing mines across Brazil, Guyana, and Suriname. Mycelium's 25,950-ha portfolio sits directly on this terrane.",
+    "whyBolivia2Title": "Clear Legal Framework",
+    "whyBolivia2Desc": "Bolivia's AJAM-administered mineral concession system grants 30-year contracts with rights to explore, develop, and produce. Los Clavillos holds contract No. AJAM/DDSC/CAM/0010/2019 — fully executed and in good standing.",
+    "whyBolivia3Title": "15 Years on the Ground",
+    "whyBolivia3Desc": "Mycelium's team has operated continuously in Bolivia since 2011 — building relationships with regulators, communities, and service providers that take years to develop. Our local presence is a durable competitive advantage.",
+    "whyBolivia4Title": "All-Season Road Access",
+    "whyBolivia4Desc": "All three project sites are accessible by paved highway from Santa Cruz city. Los Clavillos: 180 km paved + 5.5 km gravel. Cerrito XXI & XXII: 282 km fully paved, 5 hours drive.",
+    "whyBolivia5Title": "Lower Exploration Costs",
+    "whyBolivia5Desc": "Exploration costs in eastern Bolivia are substantially lower than comparable programs in Canada or Australia — allowing Mycelium to drill more metres per dollar and accelerate the path to a resource estimate.",
+    "whyBolivia6Title": "Compliance Track Record",
+    "whyBolivia6Desc": "10 consecutive Annual Environmental Monitoring Reports (IMA) filed without interruption at Los Clavillos — demonstrating the regulatory track record that de-risks permitting for Cerrito XXI and XXII.",
+    "investorAlertEyebrow": "Stay Informed",
+    "investorAlertTitle": "Sign Up for Investor Alerts",
+    "investorAlertSubtitle": "Receive press releases, drilling updates, and shareholder news directly in your inbox.",
+    "investorAlertNamePlaceholder": "Your name",
+    "investorAlertEmailPlaceholder": "Your email address",
+    "investorAlertCta": "Subscribe",
+    "investorAlertSuccess": "Thank you for subscribing. You will receive our next investor alert by email.",
+    "investorAlertDisclaimer": "We respect your privacy. Unsubscribe at any time."
   },
   "about": {
     "title": "About Mycelium Minerals",
@@ -241,6 +274,7 @@
   "footer": {
     "disclaimer": "This website contains forward-looking statements. Actual results may differ materially from those projected.",
     "copyright": "© {year} Mycelium Minerals Inc. All rights reserved.",
-    "exchange": "Listed on the Toronto Stock Exchange (TSX)"
+    "exchange": "Listed on the Toronto Stock Exchange (TSX)",
+    "socialTitle": "Follow Us"
   }
 }

@@ -47,7 +47,7 @@ function SustainabilityContent() {
       <section className="bg-white border-b border-obsidian">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <FadeInView>
-            <p className="text-xs font-mono uppercase tracking-widest text-obsidian/40 mb-10 text-center">
+            <p className="text-xs font-mono font-medium uppercase tracking-widest text-obsidian/65 mb-10 text-center">
               {t('pillarsTitle')}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-obsidian">

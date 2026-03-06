@@ -114,8 +114,8 @@ function NewsPageContent() {
                   <span className="text-xs font-mono uppercase tracking-widest text-gold">
                     {t('pressRelease')}
                   </span>
-                  <span className="text-xs font-mono text-obsidian/30">·</span>
-                  <time className="text-xs font-mono text-obsidian/40 uppercase tracking-widest">
+                  <span className="text-xs font-mono text-obsidian/50">·</span>
+                  <time className="text-xs font-mono text-obsidian/65 uppercase tracking-widest">
                     {article.date}
                   </time>
                 </div>
@@ -125,7 +125,7 @@ function NewsPageContent() {
                 <p className="text-sm text-obsidian/70 leading-relaxed flex-1">{article.excerpt}</p>
                 <Link
                   href={`/news/${article.slug}`}
-                  className="text-xs font-mono text-obsidian/40 group-hover:text-gold transition-colors mt-auto pt-4 border-t border-obsidian/10 inline-block"
+                  className="text-xs font-mono text-obsidian/65 group-hover:text-gold transition-colors mt-auto pt-4 border-t border-obsidian/10 inline-block"
                 >
                   {t('readArticle')} →
                 </Link>

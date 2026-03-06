@@ -135,7 +135,7 @@ function ContactInfo() {
   return (
     <div className="flex flex-col gap-10">
       <div>
-        <p className="text-xs font-mono uppercase tracking-widest text-obsidian/40 mb-4">
+        <p className="text-xs font-mono uppercase tracking-widest text-obsidian/65 mb-4">
           Investor Relations
         </p>
         <div className="flex flex-col gap-2">
@@ -154,7 +154,7 @@ function ContactInfo() {
         </div>
       </div>
       <div>
-        <p className="text-xs font-mono uppercase tracking-widest text-obsidian/40 mb-4">
+        <p className="text-xs font-mono uppercase tracking-widest text-obsidian/65 mb-4">
           Head Office
         </p>
         <p className="text-sm text-obsidian/70 leading-relaxed">
@@ -164,7 +164,7 @@ function ContactInfo() {
         </p>
       </div>
       <div>
-        <p className="text-xs font-mono uppercase tracking-widest text-obsidian/40 mb-4">
+        <p className="text-xs font-mono uppercase tracking-widest text-obsidian/65 mb-4">
           Bolivia Operations
         </p>
         <p className="text-sm text-obsidian/70 leading-relaxed">
@@ -172,7 +172,7 @@ function ContactInfo() {
         </p>
       </div>
       <div>
-        <p className="text-xs font-mono uppercase tracking-widest text-obsidian/40 mb-4">
+        <p className="text-xs font-mono uppercase tracking-widest text-obsidian/65 mb-4">
           Careers
         </p>
         <p className="text-sm text-obsidian/70 leading-relaxed">

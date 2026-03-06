@@ -98,7 +98,14 @@
     "annualProduction": "Budget du Programme",
     "resources": "Programme de Forage",
     "projectArea": "Superficie du Projet",
-    "operatingSince": "Statut du Permis"
+    "operatingSince": "Statut du Permis",
+    "drillResultsTitle": "Résultats de Forage",
+    "drillResultsNote": "Tableaux complets d'analyses et journaux de forage disponibles dans les rapports techniques ci-dessous.",
+    "anchorOverview": "Aperçu",
+    "anchorDrillResults": "Résultats de Forage",
+    "anchorLocation": "Emplacement",
+    "anchorDocuments": "Documents",
+    "downloadPrimaryReport": "Télécharger le Rapport Technique"
   },
   "investorRelations": {
     "title": "Relations Investisseurs",
@@ -148,7 +155,33 @@
     "investmentUse2": "Analyses en laboratoires certifiés",
     "investmentUse3": "Modélisation géologique",
     "investmentUse4": "Estimation initiale des ressources",
-    "investmentCta": "Contacter Notre Équipe RI"
+    "investmentCta": "Contacter Notre Équipe RI",
+    "credibilityLine": "Plus de 15 ans d'expérience opérationnelle en Bolivie, depuis 2011.",
+    "marketDataEyebrow": "Données de Marché en Direct",
+    "marketDataSubtitle": "Prix spot de l'or, de l'argent et du cuivre — mis à jour en temps réel.",
+    "whyBoliviaEyebrow": "Pourquoi la Bolivie ?",
+    "whyBoliviaTitle": "Une Juridiction Minière Éprouvée",
+    "whyBoliviaSubtitle": "Les basses terres orientales de la Bolivie abritent une extension prolifique du Bouclier Précambrien Brésilien — le même terrain géologique responsable de gisements aurifères de plusieurs millions d'onces à travers le continent.",
+    "whyBolivia1Title": "Géologie de Classe Mondiale",
+    "whyBolivia1Desc": "Le Bouclier Précambrien Brésilien dans le Santa Cruz héberge des systèmes d'or orogénique analogues aux mines en production au Brésil, en Guyane et au Suriname. Le portefeuille de 25 950 ha de Mycelium se situe directement sur ce terrain.",
+    "whyBolivia2Title": "Cadre Juridique Clair",
+    "whyBolivia2Desc": "Le système de concessions minières administré par l'AJAM en Bolivie accorde des contrats de 30 ans avec des droits d'exploration, de développement et de production. Los Clavillos détient le contrat No. AJAM/DDSC/CAM/0010/2019 — pleinement exécuté et en règle.",
+    "whyBolivia3Title": "15 Ans sur le Terrain",
+    "whyBolivia3Desc": "L'équipe de Mycelium opère continuellement en Bolivie depuis 2011 — tissant des relations avec les régulateurs, les communautés et les prestataires de services qui prennent des années à construire. Notre présence locale est un avantage concurrentiel durable.",
+    "whyBolivia4Title": "Accès Routier Toutes Saisons",
+    "whyBolivia4Desc": "Les trois sites de projets sont accessibles par route asphaltée depuis la ville de Santa Cruz. Los Clavillos : 180 km asphaltés + 5,5 km de gravier. Cerrito XXI & XXII : 282 km entièrement asphaltés, 5 heures de route.",
+    "whyBolivia5Title": "Coûts d'Exploration Réduits",
+    "whyBolivia5Desc": "Les coûts d'exploration dans l'est de la Bolivie sont nettement inférieurs à ceux de programmes comparables au Canada ou en Australie — permettant à Mycelium de forer plus de mètres par dollar et d'accélérer la voie vers une estimation des ressources.",
+    "whyBolivia6Title": "Bilan de Conformité",
+    "whyBolivia6Desc": "10 Rapports Annuels de Suivi Environnemental (IMA) déposés sans interruption à Los Clavillos — démontrant le bilan réglementaire qui réduit le risque de permis pour Cerrito XXI et XXII.",
+    "investorAlertEyebrow": "Restez Informé",
+    "investorAlertTitle": "Inscrivez-vous aux Alertes Investisseurs",
+    "investorAlertSubtitle": "Recevez les communiqués de presse, les mises à jour de forage et les nouvelles aux actionnaires directement dans votre boîte de réception.",
+    "investorAlertNamePlaceholder": "Votre nom",
+    "investorAlertEmailPlaceholder": "Votre adresse e-mail",
+    "investorAlertCta": "S'abonner",
+    "investorAlertSuccess": "Merci de votre inscription. Vous recevrez notre prochaine alerte investisseur par e-mail.",
+    "investorAlertDisclaimer": "Nous respectons votre vie privée. Désabonnez-vous à tout moment."
   },
   "about": {
     "title": "À Propos de Mycelium Minerals",
@@ -241,6 +274,7 @@
   "footer": {
     "disclaimer": "Ce site contient des déclarations prospectives. Les résultats réels peuvent différer sensiblement de ceux projetés.",
     "copyright": "© {year} Mycelium Minerals Inc. Tous droits réservés.",
-    "exchange": "Coté à la Bourse de Toronto (TSX)"
+    "exchange": "Coté à la Bourse de Toronto (TSX)",
+    "socialTitle": "Suivez-Nous"
   }
 }

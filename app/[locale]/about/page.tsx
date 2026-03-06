@@ -120,12 +120,12 @@ function AboutContent() {
                 <span className="font-mono font-bold text-3xl text-gold">
                   {t('ceoYearsValue')}
                 </span>
-                <p className="text-xs font-mono uppercase tracking-widest text-obsidian/40 mt-1">
+                <p className="text-xs font-mono font-medium uppercase tracking-widest text-obsidian/65 mt-1">
                   {t('ceoYearsLabel')}
                 </p>
               </div>
               <div className="border-l border-obsidian/10 pl-10">
-                <p className="text-xs font-mono uppercase tracking-widest text-obsidian/30 mb-1">
+                <p className="text-xs font-mono font-medium uppercase tracking-widest text-obsidian/60 mb-1">
                   Corporate Structure
                 </p>
                 <p className="font-mono text-sm text-obsidian/60">{t('ceoPriorLabel')}</p>

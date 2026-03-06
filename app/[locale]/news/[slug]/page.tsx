@@ -152,7 +152,7 @@ function ArticleContent({ slug }: { slug: string }) {
           </Link>
           <div className="mt-6 flex items-center gap-3">
             <Badge label={t('pressRelease')} variant="stage" />
-            <time className="text-xs font-mono text-obsidian/40 uppercase tracking-widest">
+            <time className="text-xs font-mono text-obsidian/65 uppercase tracking-widest">
               {article.date}
             </time>
           </div>
@@ -178,7 +178,7 @@ function ArticleContent({ slug }: { slug: string }) {
 
           {/* About Mycelium Minerals boilerplate */}
           <div className="mt-16 pt-10 border-t border-obsidian/20">
-            <p className="text-xs font-mono uppercase tracking-widest text-obsidian/40 mb-4">
+            <p className="text-xs font-mono uppercase tracking-widest text-obsidian/65 mb-4">
               About Mycelium Minerals
             </p>
             <p className="text-sm text-obsidian/60 leading-relaxed">
@@ -204,7 +204,7 @@ function ArticleContent({ slug }: { slug: string }) {
             </Link>
             {article.relatedSlugs.length > 0 && (
               <div>
-                <p className="text-xs font-mono uppercase tracking-widest text-obsidian/40 mb-4">
+                <p className="text-xs font-mono uppercase tracking-widest text-obsidian/65 mb-4">
                   {t('relatedReleases')}
                 </p>
                 <div className="flex flex-col gap-3">
@@ -217,7 +217,7 @@ function ArticleContent({ slug }: { slug: string }) {
                         href={`/news/${relatedSlug}`}
                         className="group flex flex-col gap-1 max-w-sm"
                       >
-                        <time className="text-xs font-mono text-obsidian/40">
+                        <time className="text-xs font-mono text-obsidian/65">
                           {related.date}
                         </time>
                         <p className="text-sm font-inter text-obsidian group-hover:text-gold transition-colors leading-snug">

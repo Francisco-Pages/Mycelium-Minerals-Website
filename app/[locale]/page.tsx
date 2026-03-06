@@ -114,7 +114,7 @@ function HeroSection({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
       {/* Content */}
       <div className="relative z-10 w-full flex flex-col items-center text-center">
         <FadeInView>
-          <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
+          <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-6">
             {t('irBandTicker')} · Gold &amp; Silver · Bolivia
           </p>
         </FadeInView>
@@ -162,7 +162,7 @@ function MetricsBar({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
     <section className="bg-obsidian border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <FadeInView>
-          <p className="text-xs font-mono uppercase tracking-widest text-white/30 mb-10 text-center">
+          <p className="text-xs font-mono font-medium uppercase tracking-widest text-white/60 mb-10 text-center">
             {t('metricsEyebrow')}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
@@ -210,7 +210,7 @@ function ProblemSolutionSection({ t }: { t: ReturnType<typeof useTranslations<'h
           direction="left"
           className="bg-white px-8 md:px-16 py-20 flex flex-col justify-center border-r border-obsidian/10"
         >
-          <p className="text-xs font-mono uppercase tracking-widest text-obsidian/30 mb-8">
+          <p className="text-xs font-mono font-medium uppercase tracking-widest text-obsidian/60 mb-8">
             {t('problemEyebrow')}
           </p>
           <div className="mb-6">
@@ -231,7 +231,7 @@ function ProblemSolutionSection({ t }: { t: ReturnType<typeof useTranslations<'h
           direction="right"
           className="bg-obsidian px-8 md:px-16 py-20 flex flex-col justify-center"
         >
-          <p className="text-xs font-mono uppercase tracking-widest text-gold mb-8">
+          <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-8">
             {t('solutionEyebrow')}
           </p>
           <h2 className="font-clash font-bold text-3xl sm:text-4xl md:text-6xl text-white leading-tight mb-6">
@@ -337,7 +337,7 @@ function LatestNews({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
                 key={article.slug}
                 className="border-b border-r border-obsidian/20 bg-white p-6 flex flex-col gap-4 group hover:bg-offwhite transition-colors"
               >
-                <time className="text-xs font-mono text-obsidian/40 uppercase tracking-widest">
+                <time className="text-xs font-mono text-obsidian/65 uppercase tracking-widest">
                   {article.date}
                 </time>
                 <h3 className="font-clash font-bold text-lg text-obsidian leading-tight group-hover:text-gold transition-colors">
@@ -346,7 +346,7 @@ function LatestNews({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
                 <p className="text-sm text-obsidian/70 leading-relaxed flex-1">{article.excerpt}</p>
                 <Link
                   href={`/news/${article.slug}`}
-                  className="text-xs font-mono text-obsidian/40 group-hover:text-gold transition-colors mt-auto pt-4 border-t border-obsidian/10 inline-block"
+                  className="text-xs font-mono text-obsidian/65 group-hover:text-gold transition-colors mt-auto pt-4 border-t border-obsidian/10 inline-block"
                 >
                   {t('newsReadMore')} →
                 </Link>
@@ -375,7 +375,7 @@ function BoliviaPanel({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) 
     <section className="bg-white border-b border-obsidian">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <FadeInView>
-          <p className="text-xs font-mono uppercase tracking-widest text-gold mb-4">
+          <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-4">
             {t('boliviaEyebrow')}
           </p>
           <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian max-w-xl leading-tight mb-14">
@@ -395,7 +395,7 @@ function BoliviaPanel({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) 
               <span className="font-mono font-bold text-3xl sm:text-4xl md:text-5xl text-obsidian tabular-nums leading-none">
                 {stat.value}
               </span>
-              <span className="mt-4 text-xs font-mono uppercase tracking-widest text-obsidian/40 leading-relaxed">
+              <span className="mt-4 text-xs font-mono uppercase tracking-widest text-obsidian/65 leading-relaxed">
                 {stat.label}
               </span>
             </FadeInView>
@@ -421,7 +421,7 @@ function ESGTeaser({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
     <section className="bg-obsidian border-b border-obsidian text-white">
       <div className="max-w-7xl mx-auto px-6 py-20">
         <FadeInView>
-          <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
+          <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-6">
             Sustainability &amp; ESG
           </p>
           <h2 className="font-clash font-bold text-4xl md:text-5xl text-white max-w-3xl leading-tight">

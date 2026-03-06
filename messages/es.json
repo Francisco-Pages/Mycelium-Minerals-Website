@@ -98,7 +98,14 @@
     "annualProduction": "Presupuesto del Programa",
     "resources": "Programa de Perforación",
     "projectArea": "Área del Proyecto",
-    "operatingSince": "Estado del Permiso"
+    "operatingSince": "Estado del Permiso",
+    "drillResultsTitle": "Resultados de Perforación",
+    "drillResultsNote": "Tablas completas de ensayos y registros de perforación disponibles en los informes técnicos a continuación.",
+    "anchorOverview": "Descripción",
+    "anchorDrillResults": "Resultados de Perforación",
+    "anchorLocation": "Ubicación",
+    "anchorDocuments": "Documentos",
+    "downloadPrimaryReport": "Descargar Informe Técnico"
   },
   "investorRelations": {
     "title": "Relaciones con Inversionistas",
@@ -148,7 +155,33 @@
     "investmentUse2": "Análisis en laboratorios certificados",
     "investmentUse3": "Modelamiento geológico",
     "investmentUse4": "Estimación inicial de recursos",
-    "investmentCta": "Contactar Nuestro Equipo de RI"
+    "investmentCta": "Contactar Nuestro Equipo de RI",
+    "credibilityLine": "Más de 15 años de experiencia operativa en Bolivia, desde 2011.",
+    "marketDataEyebrow": "Datos de Mercado en Tiempo Real",
+    "marketDataSubtitle": "Precios spot de oro, plata y cobre — actualizados en tiempo real.",
+    "whyBoliviaEyebrow": "¿Por Qué Bolivia?",
+    "whyBoliviaTitle": "Una Jurisdicción Minera Probada",
+    "whyBoliviaSubtitle": "Las tierras bajas orientales de Bolivia albergan una extensión prolífica del Escudo Precámbrico Brasileño — el mismo terreno geológico responsable de campos auríferos de millones de onzas en todo el continente.",
+    "whyBolivia1Title": "Geología de Clase Mundial",
+    "whyBolivia1Desc": "El Escudo Precámbrico Brasileño en Santa Cruz alberga sistemas de oro orogénico análogos a minas productoras en Brasil, Guyana y Surinam. El portafolio de 25.950 ha de Mycelium se ubica directamente en este terreno.",
+    "whyBolivia2Title": "Marco Legal Claro",
+    "whyBolivia2Desc": "El sistema de concesiones mineras administrado por AJAM en Bolivia otorga contratos de 30 años con derechos de exploración, desarrollo y producción. Los Clavillos tiene el contrato No. AJAM/DDSC/CAM/0010/2019 — completamente ejecutado y vigente.",
+    "whyBolivia3Title": "15 Años sobre el Terreno",
+    "whyBolivia3Desc": "El equipo de Mycelium ha operado continuamente en Bolivia desde 2011 — forjando relaciones con reguladores, comunidades y proveedores que toman años en desarrollar. Nuestra presencia local es una ventaja competitiva duradera.",
+    "whyBolivia4Title": "Acceso Vial en Todas las Estaciones",
+    "whyBolivia4Desc": "Los tres sitios de proyectos son accesibles por carretera pavimentada desde la ciudad de Santa Cruz. Los Clavillos: 180 km pavimentados + 5,5 km de ripio. Cerrito XXI y XXII: 282 km completamente pavimentados, 5 horas.",
+    "whyBolivia5Title": "Costos de Exploración Menores",
+    "whyBolivia5Desc": "Los costos de exploración en el oriente boliviano son sustancialmente menores que programas comparables en Canadá o Australia — permitiendo a Mycelium perforar más metros por dólar y acelerar el camino hacia una estimación de recursos.",
+    "whyBolivia6Title": "Historial de Cumplimiento",
+    "whyBolivia6Desc": "10 Informes Anuales de Monitoreo Ambiental (IMA) presentados sin interrupción en Los Clavillos — demostrando el historial regulatorio que reduce el riesgo de permisos para Cerrito XXI y XXII.",
+    "investorAlertEyebrow": "Manténgase Informado",
+    "investorAlertTitle": "Regístrese para Alertas de Inversores",
+    "investorAlertSubtitle": "Reciba comunicados de prensa, actualizaciones de perforación y noticias para accionistas directamente en su bandeja de entrada.",
+    "investorAlertNamePlaceholder": "Su nombre",
+    "investorAlertEmailPlaceholder": "Su dirección de correo electrónico",
+    "investorAlertCta": "Suscribirse",
+    "investorAlertSuccess": "Gracias por suscribirse. Recibirá nuestra próxima alerta de inversores por correo electrónico.",
+    "investorAlertDisclaimer": "Respetamos su privacidad. Cancele la suscripción en cualquier momento."
   },
   "about": {
     "title": "Sobre Mycelium Minerals",
@@ -241,6 +274,7 @@
   "footer": {
     "disclaimer": "Este sitio web contiene declaraciones prospectivas. Los resultados reales pueden diferir materialmente de los proyectados.",
     "copyright": "© {year} Mycelium Minerals Inc. Todos los derechos reservados.",
-    "exchange": "Cotiza en la Bolsa de Valores de Toronto (TSX)"
+    "exchange": "Cotiza en la Bolsa de Valores de Toronto (TSX)",
+    "socialTitle": "Síguenos"
   }
 }

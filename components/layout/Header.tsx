@@ -55,7 +55,7 @@ export default function Header() {
           <span className="hidden md:inline-flex items-center gap-2 font-mono text-xs border border-obsidian px-3 py-1">
             <span className="text-obsidian/50">TSX:</span>
             <span className="font-semibold">MYC</span>
-            <span className="text-obsidian/40">—</span>
+            <span className="text-obsidian/60">—</span>
           </span>
 
           {/* Language switcher */}

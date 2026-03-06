@@ -18,6 +18,20 @@ export default async function ProjectDetailPage({
 // Placeholder data — TODO: replace with await sanityFetch(projectBySlugQuery, { slug })
 // ---------------------------------------------------------------------------
 
+interface DrillHighlight {
+  hole: string;
+  grade: string;
+  label: string;
+  peak?: boolean;
+}
+
+interface DrillCampaign {
+  period: string;
+  holes: string;
+  metres: string;
+  note: string;
+}
+
 interface ProjectData {
   name: string;
   stage: string;
@@ -39,6 +53,9 @@ interface ProjectData {
   description: string[];
   highlights: string[];
   documents: string[];
+  primaryDocument?: string;
+  drillHighlights?: DrillHighlight[];
+  drillCampaigns?: DrillCampaign[];
 }
 
 const PROJECT_DATA: Record<string, ProjectData> = {
@@ -82,6 +99,17 @@ const PROJECT_DATA: Record<string, ProjectData> = {
       'Declaratoria de Impacto Ambiental (DIA No. 071103/02/DIA/5936/15)',
       'Informe de Monitoreo Ambiental IMA 2024–2025',
     ],
+    primaryDocument: 'Informe Técnico — Los Clavillos (Período 2025)',
+    drillHighlights: [
+      { hole: 'CMB-017-2020', grade: '12.95 g/t Au', label: 'Peak Intercept', peak: true },
+      { hole: '2020–2021 Campaign', grade: '4.04 g/t Au', label: 'Confirmed Intercept' },
+      { hole: 'Multiple Holes', grade: '1–4 g/t Au', label: 'Consistent Zones' },
+    ],
+    drillCampaigns: [
+      { period: '2013', holes: 'CMB-01 → CMB-13', metres: '1,371 m', note: '13 holes' },
+      { period: '2020–2021', holes: 'CMB-14 → CMB-26', metres: '1,758 m', note: '13 holes · ALS Peru' },
+      { period: '2025', holes: 'Ongoing', metres: '—', note: 'Reserve definition' },
+    ],
   },
   'cerrito-xxi': {
     name: 'Cerrito XXI',
@@ -115,6 +143,7 @@ const PROJECT_DATA: Record<string, ProjectData> = {
       'ASTER Satellite Imagery Analysis & Target Definition',
       'Exploration Program Budget Summary — 5-Year Plan',
     ],
+    primaryDocument: 'Plan de Trabajo — Cerrito XXI (Mycelium Minerals Bolivia MMB S.R.L.)',
   },
   'cerrito-xxii': {
     name: 'Cerrito XXII',
@@ -148,6 +177,7 @@ const PROJECT_DATA: Record<string, ProjectData> = {
       'Geological Mapping & Priority Target Definition',
       'Exploration Program Budget Summary — 5-Year Plan',
     ],
+    primaryDocument: 'Plan de Trabajo — Cerrito XXII (Mycelium Minerals Bolivia MMB S.R.L.)',
   },
 };
 
@@ -180,6 +210,13 @@ function ProjectDetailContent({ slug }: { slug: string }) {
     { label: project.statLabels?.since ?? t('operatingSince'), value: project.stats.since },
   ];
 
+  const anchorLinks = [
+    { label: t('anchorOverview'), href: '#overview' },
+    ...(project.drillHighlights ? [{ label: t('anchorDrillResults'), href: '#drill-results' }] : []),
+    { label: t('anchorLocation'), href: '#location' },
+    { label: t('anchorDocuments'), href: '#documents' },
+  ];
+
   return (
     <div>
       {/* Project Hero */}
@@ -206,10 +243,27 @@ function ProjectDetailContent({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {/* Anchor Navigation */}
+      <nav className="bg-white border-b border-obsidian sticky top-16 z-40">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex overflow-x-auto">
+            {anchorLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="flex-shrink-0 px-6 py-4 text-xs font-mono uppercase tracking-widest text-obsidian/50 hover:text-obsidian hover:bg-offwhite transition-colors border-r border-obsidian/10 whitespace-nowrap"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </nav>
+
       {/* Stats Bar */}
-      <section className="bg-white border-b border-obsidian">
+      <section id="overview" className="bg-white border-b border-obsidian">
         <div className="max-w-7xl mx-auto px-6 py-12">
-          <p className="text-xs font-mono uppercase tracking-widest text-obsidian/40 mb-8 text-center">
+          <p className="text-xs font-mono uppercase tracking-widest text-obsidian/65 mb-8 text-center">
             {t('keyStats')}
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4">
@@ -268,11 +322,70 @@ function ProjectDetailContent({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {/* Drill Results — Los Clavillos only */}
+      {project.drillHighlights && project.drillCampaigns && (
+        <section id="drill-results" className="bg-obsidian border-b border-obsidian">
+          <div className="max-w-7xl mx-auto px-6 py-16">
+            <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-4">
+              {t('drillResultsTitle')}
+            </p>
+            <h2 className="font-clash font-bold text-4xl md:text-5xl text-white mb-12">
+              {t('drillResultsTitle')}
+            </h2>
+
+            {/* Grade Highlight Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/20 mb-10">
+              {project.drillHighlights.map((result, i) => (
+                <div
+                  key={i}
+                  className={`p-8 flex flex-col gap-2 ${
+                    result.peak ? 'bg-gold' : 'bg-white/5'
+                  } ${i < project.drillHighlights!.length - 1 ? 'border-b md:border-b-0 md:border-r border-white/20' : ''}`}
+                >
+                  <p className={`text-xs font-mono uppercase tracking-widest ${result.peak ? 'text-obsidian/50' : 'text-white/70'}`}>
+                    {result.hole}
+                  </p>
+                  <p className={`font-clash font-bold text-4xl md:text-5xl leading-none ${result.peak ? 'text-obsidian' : 'text-white'}`}>
+                    {result.grade}
+                  </p>
+                  <p className={`text-xs font-mono uppercase tracking-widest ${result.peak ? 'text-obsidian/60' : 'text-white/50'}`}>
+                    {result.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Campaign Summary Table */}
+            <div className="border border-white/20">
+              <div className="grid grid-cols-4 border-b border-white/20 bg-white/5 px-6 py-3">
+                {['Period', 'Holes', 'Metres', 'Notes'].map((h) => (
+                  <span key={h} className="text-xs font-mono uppercase tracking-widest text-white/60">
+                    {h}
+                  </span>
+                ))}
+              </div>
+              {project.drillCampaigns.map((row, i) => (
+                <div
+                  key={i}
+                  className="grid grid-cols-4 px-6 py-4 border-b border-white/10 last:border-b-0"
+                >
+                  <span className="font-mono text-sm text-gold">{row.period}</span>
+                  <span className="font-mono text-sm text-white/70">{row.holes}</span>
+                  <span className="font-mono text-sm text-white/70">{row.metres}</span>
+                  <span className="font-mono text-sm text-white/50">{row.note}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-xs font-mono text-white/60">{t('drillResultsNote')}</p>
+          </div>
+        </section>
+      )}
+
       {/* Map Placeholder */}
-      <section className="bg-white border-b border-obsidian">
+      <section id="location" className="bg-white border-b border-obsidian">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="border border-obsidian h-64 flex items-center justify-center">
-            <p className="font-mono text-xs text-obsidian/30 uppercase tracking-widest">
+            <p className="font-mono text-xs text-obsidian/60 uppercase tracking-widest">
               Project Map — {project.department} Department · Coming Soon
             </p>
           </div>
@@ -280,12 +393,20 @@ function ProjectDetailContent({ slug }: { slug: string }) {
       </section>
 
       {/* Documents Table */}
-      <section className="bg-offwhite border-b border-obsidian">
+      <section id="documents" className="bg-offwhite border-b border-obsidian">
         <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-obsidian gap-4">
             <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
               {t('documents')}
             </h2>
+            {project.primaryDocument && (
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-obsidian text-white text-sm font-mono hover:bg-gold hover:text-obsidian border border-obsidian hover:border-gold transition-colors whitespace-nowrap"
+              >
+                {t('downloadPrimaryReport')} ↓
+              </a>
+            )}
           </div>
           <div className="border border-obsidian">
             {project.documents.map((doc, i) => (

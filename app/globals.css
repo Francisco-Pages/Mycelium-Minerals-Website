@@ -28,6 +28,12 @@
 
   /* Custom border width */
   --border-width-1\.5: 1.5px;
+
+  /* Font size overrides — bump xs and sm up for legibility */
+  --text-xs: 13px;        /* 13px  (default: 12px) */
+  --text-xs--line-height: 1.375rem;
+  --text-sm: 0.9375rem;        /* 15px  (default: 14px) */
+  --text-sm--line-height: 1.5rem;
 }
 
 /* ── Clash Display font (download from fontshare.com) ─────────────────────
@@ -45,6 +51,10 @@
 
 :root {
   color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

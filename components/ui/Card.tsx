@@ -57,7 +57,7 @@ export default function Card({
       {/* Arrow indicator for linked cards */}
       {href && (
         <div className="mt-auto pt-4 border-t border-obsidian/10 flex items-center justify-between">
-          <span className="text-xs font-mono text-obsidian/40 group-hover:text-gold transition-colors">
+          <span className="text-xs font-mono font-medium text-obsidian/65 group-hover:text-gold transition-colors">
             Learn more →
           </span>
         </div>

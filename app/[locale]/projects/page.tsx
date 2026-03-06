@@ -136,7 +136,7 @@ function ProjectsPageContent() {
           </FadeInView>
           <FadeInView delay={0.15}>
             <div className="mt-14 border border-white/20 h-72 flex items-center justify-center">
-              <p className="font-mono text-xs text-white/30 uppercase tracking-widest">
+              <p className="font-mono text-xs font-medium text-white/60 uppercase tracking-widest">
                 {t('mapComingSoon')}
               </p>
             </div>
