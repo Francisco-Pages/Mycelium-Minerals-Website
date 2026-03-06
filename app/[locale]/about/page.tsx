@@ -19,39 +19,14 @@ export default async function AboutPage({
 
 const EXECUTIVES = [
   {
-    name: 'María Elena Vargas',
+    name: 'Francisco Pages',
     title: 'Chief Executive Officer',
-    bio: 'Over 20 years leading gold and silver operations across Latin America, including prior roles at Antamina and Barrick.',
+    bio: 'Founder and 49% shareholder of Mycelium Minerals Bolivia SRL. Has led the company since its establishment in Bolivia in 2011, overseeing the strategic acquisition of 25,950 hectares of mineral concessions across eastern Bolivia.',
   },
   {
-    name: 'James Thornton',
-    title: 'Chief Financial Officer',
-    bio: 'Former mining analyst at RBC Capital Markets with extensive experience in TSX-listed company finance and capital allocation.',
-  },
-  {
-    name: 'Roberto Chávez Quispe',
-    title: 'Chief Operating Officer',
-    bio: 'Bolivian national with 18 years of operational experience across the Oruro and La Paz mining districts.',
-  },
-  {
-    name: 'Dr. Sarah Okonkwo',
+    name: 'Jeffery Zelinski',
     title: 'VP Exploration',
-    bio: 'Holds a PhD in Economic Geology from the University of Toronto; led discovery of the San Cristóbal Norte deposit.',
-  },
-  {
-    name: 'Alejandro Mamani',
-    title: 'VP Sustainability',
-    bio: 'Architect of Mycelium\'s community engagement framework and lead partner on the Bolivian reforestation program.',
-  },
-  {
-    name: 'Catherine Beaumont',
-    title: 'General Counsel',
-    bio: 'Specialized in cross-border mining law with 15 years advising TSX issuers on Bolivian regulatory compliance.',
-  },
-  {
-    name: 'Michael Patterson',
-    title: 'VP Investor Relations',
-    bio: 'Former buy-side analyst covering precious metals; oversees all capital markets communication for the Company.',
+    bio: 'Geologist and equity option holder in Mycelium Minerals Bolivia SRL. Leads all exploration programs across the portfolio, including the planned 5,000-meter diamond drill campaign at the Concepción Project targeting a gold-bearing mineralized system.',
   },
 ] as const;
 
@@ -151,7 +126,7 @@ function AboutContent() {
               </div>
               <div className="border-l border-obsidian/10 pl-10">
                 <p className="text-xs font-mono uppercase tracking-widest text-obsidian/30 mb-1">
-                  Prior Experience
+                  Corporate Structure
                 </p>
                 <p className="font-mono text-sm text-obsidian/60">{t('ceoPriorLabel')}</p>
               </div>

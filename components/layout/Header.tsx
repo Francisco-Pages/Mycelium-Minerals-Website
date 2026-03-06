@@ -37,12 +37,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
           {NAV_LINKS.map(({ key, href }) => (
             <Link
               key={key}
               href={`/${locale}${href}`}
-              className="text-sm font-inter font-medium text-obsidian hover:text-gold transition-colors"
+              className="text-xs xl:text-sm font-inter font-medium text-obsidian hover:text-gold transition-colors whitespace-nowrap"
             >
               {t(key)}
             </Link>

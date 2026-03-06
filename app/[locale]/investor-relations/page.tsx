@@ -20,23 +20,23 @@ export default async function InvestorRelationsPage({
 
 const FINANCIAL_HIGHLIGHTS = [
   {
-    metric: 'Gold Production (oz)',
-    fy2024: '125,000',
-    fy2023: '112,400',
+    metric: 'Total Concession Area (ha)',
+    fy2024: '25,950',
+    fy2023: '2,850',
   },
   {
-    metric: 'Silver Production (oz)',
-    fy2024: '1,840,000',
-    fy2023: '1,620,000',
+    metric: 'Active Drill Programs',
+    fy2024: '1',
+    fy2023: '1',
   },
   {
-    metric: 'Revenue (C$M)',
-    fy2024: '—',
+    metric: 'Committed Exploration Budget (USD)',
+    fy2024: '$738,358',
     fy2023: '—',
   },
   {
-    metric: 'AISC ($/oz Au eq.)',
-    fy2024: '—',
+    metric: 'Capital Raise Target (USD)',
+    fy2024: '$1,000,000',
     fy2023: '—',
   },
 ] as const;
@@ -45,31 +45,31 @@ const TIMELINE = [
   {
     step: '01',
     phase: 'Exploration',
-    desc: 'Geological surveys, sampling, and target identification across Bolivia.',
-    active: false,
+    desc: 'Active diamond drilling, geological surveys, and target identification across 25,950 ha in eastern Bolivia.',
+    active: true,
   },
   {
     step: '02',
-    phase: 'Permitting',
-    desc: 'Environmental approvals and community agreements secured before capital deployment.',
+    phase: 'Resource Estimate',
+    desc: 'Compliant mineral resource estimate to be defined following the 5,000m Concepción drill program.',
     active: false,
   },
   {
     step: '03',
-    phase: 'Development',
-    desc: 'Mine construction, metallurgical testing, and workforce training.',
+    phase: 'Permitting',
+    desc: 'Environmental approvals (LPE) and community agreements for Cerrito XXI and XXII currently pending.',
     active: false,
   },
   {
     step: '04',
-    phase: 'Production',
-    desc: 'Revenue-generating operations at all four Mycelium mine sites.',
-    active: true,
+    phase: 'Development',
+    desc: 'Mine construction, metallurgical testing, and workforce scaling.',
+    active: false,
   },
   {
     step: '05',
-    phase: 'Expansion',
-    desc: 'Reserve growth through in-mine drilling and brownfields exploration programs.',
+    phase: 'Production',
+    desc: 'Revenue-generating operations supported by a formal resource estimate and mine plan.',
     active: false,
   },
 ] as const;
@@ -177,6 +177,80 @@ function InvestorRelationsContent() {
               </FadeInView>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Investment Opportunity */}
+      <section className="bg-obsidian border-b border-obsidian">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <FadeInView>
+            <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
+              {t('investmentOpportunityEyebrow')}
+            </p>
+            <h2 className="font-clash font-bold text-4xl md:text-6xl text-white max-w-3xl leading-tight mb-4">
+              {t('investmentOpportunityTitle')}
+            </h2>
+            <p className="text-base text-white/60 max-w-2xl leading-relaxed mb-12">
+              {t('investmentOpportunitySubtitle')}
+            </p>
+          </FadeInView>
+
+          <FadeInView delay={0.1}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-white/20 mb-12">
+              <div className="p-8 border-b md:border-b-0 border-r border-white/20">
+                <p className="text-xs font-mono uppercase tracking-widest text-gold mb-3">
+                  {t('investmentEquityLabel')}
+                </p>
+                <p className="font-clash font-bold text-4xl text-white">{t('investmentEquityValue')}</p>
+                <p className="mt-2 text-xs text-white/50 leading-relaxed">{t('investmentEquityDesc')}</p>
+              </div>
+              <div className="p-8 border-b md:border-b-0 border-r border-white/20">
+                <p className="text-xs font-mono uppercase tracking-widest text-gold mb-3">
+                  {t('investmentCapitalLabel')}
+                </p>
+                <p className="font-clash font-bold text-4xl text-white">{t('investmentCapitalValue')}</p>
+                <p className="mt-2 text-xs text-white/50 leading-relaxed">{t('investmentCapitalDesc')}</p>
+              </div>
+              <div className="p-8 border-b md:border-b-0 border-r border-white/20">
+                <p className="text-xs font-mono uppercase tracking-widest text-gold mb-3">
+                  {t('investmentDrillLabel')}
+                </p>
+                <p className="font-clash font-bold text-4xl text-white">{t('investmentDrillValue')}</p>
+                <p className="mt-2 text-xs text-white/50 leading-relaxed">{t('investmentDrillDesc')}</p>
+              </div>
+              <div className="p-8">
+                <p className="text-xs font-mono uppercase tracking-widest text-gold mb-3">
+                  {t('investmentPortfolioLabel')}
+                </p>
+                <p className="font-clash font-bold text-4xl text-white">{t('investmentPortfolioValue')}</p>
+                <p className="mt-2 text-xs text-white/50 leading-relaxed">{t('investmentPortfolioDesc')}</p>
+              </div>
+            </div>
+          </FadeInView>
+
+          <FadeInView delay={0.2}>
+            <div className="border border-white/20 p-8 bg-white/5">
+              <p className="text-xs font-mono uppercase tracking-widest text-gold mb-4">
+                {t('investmentUseProceedsLabel')}
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {(['investmentUse1', 'investmentUse2', 'investmentUse3', 'investmentUse4'] as const).map((key) => (
+                  <li key={key} className="flex items-start gap-3">
+                    <span className="mt-1 w-1.5 h-1.5 bg-gold flex-shrink-0" />
+                    <span className="text-sm text-white/70">{t(key)}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 pt-6 border-t border-white/10">
+                <a
+                  href={`mailto:${t('irEmail')}`}
+                  className="inline-block font-mono text-sm text-white hover:text-gold transition-colors border border-white/30 hover:border-gold px-6 py-3"
+                >
+                  {t('investmentCta')} →
+                </a>
+              </div>
+            </div>
+          </FadeInView>
         </div>
       </section>
 
@@ -314,10 +388,10 @@ function InvestorRelationsContent() {
                       Metric
                     </th>
                     <th className="text-right px-6 py-4 text-xs font-mono uppercase tracking-widest font-normal">
-                      FY2024
+                      Current
                     </th>
                     <th className="text-right px-6 py-4 text-xs font-mono uppercase tracking-widest font-normal border-l border-white/10">
-                      FY2023
+                      Prior
                     </th>
                   </tr>
                 </thead>

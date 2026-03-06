@@ -24,14 +24,14 @@ const PROJECTS = [
   {
     title: 'Los Clavillos',
     stage: 'Exploration',
-    commodities: ['Gold'],
+    commodities: ['Gold', 'Silver', 'Copper', 'Zinc', 'Lead'],
     location: 'Ñuflo de Chávez, Santa Cruz',
     slug: 'los-clavillos',
   },
   {
     title: 'Cerrito XXI',
     stage: 'Exploration',
-    commodities: ['Gold'],
+    commodities: ['Gold', 'Silver'],
     location: 'Ñuflo de Chávez, Santa Cruz',
     slug: 'cerrito-xxi',
   },
@@ -96,7 +96,7 @@ function HomePageContent() {
 
 function HeroSection({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
   return (
-    <section className="min-h-[85vh] relative flex flex-col items-center justify-center px-6 py-24 border-b border-obsidian text-center overflow-hidden bg-obsidian">
+    <section className="relative flex flex-col items-center justify-center px-6 py-28 sm:py-24 sm:min-h-[85vh] border-b border-obsidian text-center overflow-hidden bg-obsidian">
       {/* Background video — place your file at /public/video/hero.mp4 */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -112,7 +112,7 @@ function HeroSection({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
       <div className="absolute inset-0 bg-obsidian/55" />
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 w-full flex flex-col items-center text-center">
         <FadeInView>
           <p className="text-xs font-mono uppercase tracking-widest text-gold mb-6">
             {t('irBandTicker')} · Gold &amp; Silver · Bolivia
@@ -165,15 +165,24 @@ function MetricsBar({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
           <p className="text-xs font-mono uppercase tracking-widest text-white/30 mb-10 text-center">
             {t('metricsEyebrow')}
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
             {metrics.map((metric, i) => (
               <div
                 key={metric.label}
-                className={`flex flex-col items-center py-6 px-4 ${
-                  i < metrics.length - 1 ? 'border-r border-white/10' : ''
-                }`}
+                className={[
+                  'flex flex-col items-center py-8 px-4 border-white/10',
+                  // 1-col: bottom border between items
+                  i < 3 ? 'border-b' : '',
+                  // sm 2-col: right border on left column, bottom border between rows only
+                  i % 2 === 0 ? 'sm:border-r' : 'sm:border-r-0',
+                  i < 2 ? 'sm:border-b' : 'sm:border-b-0',
+                  // xl 4-col: right border on all but last, no bottom border
+                  i < 3 ? 'xl:border-r xl:border-b-0' : 'xl:border-r-0 xl:border-b-0',
+                ]
+                  .filter(Boolean)
+                  .join(' ')}
               >
-                <span className="font-clash font-bold text-4xl sm:text-6xl md:text-8xl text-gold leading-none tabular-nums">
+                <span className="font-clash font-bold text-6xl sm:text-7xl text-gold leading-none tabular-nums">
                   {metric.value}
                 </span>
                 <span className="mt-4 text-sm font-mono font-bold uppercase tracking-widest text-white/60">

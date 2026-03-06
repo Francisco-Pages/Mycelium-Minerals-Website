@@ -30,6 +30,12 @@ interface ProjectData {
     area: string;
     since: string;
   };
+  statLabels?: {
+    production?: string;
+    resources?: string;
+    area?: string;
+    since?: string;
+  };
   description: string[];
   highlights: string[];
   documents: string[];
@@ -39,30 +45,40 @@ const PROJECT_DATA: Record<string, ProjectData> = {
   'los-clavillos': {
     name: 'Los Clavillos',
     stage: 'Exploration',
-    commodities: ['Gold'],
+    commodities: ['Gold', 'Silver', 'Copper', 'Zinc', 'Lead'],
     location: 'Cantón San Ramón, Ñuflo de Chávez, Santa Cruz, Bolivia',
     department: 'Santa Cruz',
     stats: {
-      production: 'Active 2025 Program',
-      resources: 'Reserve determination drilling',
+      production: 'Up to 12.95 g/t Au',
+      resources: '3,129m Drilled (26 Holes)',
       area: '275 ha (11 cuadrículas)',
       since: '30-Year Contract (2019)',
     },
+    statLabels: {
+      production: 'Peak Gold Grade',
+      resources: 'Total Historical Drilling',
+      area: 'Project Area',
+      since: 'Contract Status',
+    },
     description: [
       "Los Clavillos is Mycelium Minerals' most advanced exploration project — a 275-hectare (11 cuadrículas) concession in Cantón San Ramón, Ñuflo de Chávez Province, Santa Cruz Department, Bolivia. The property is operated by Crown Mining Bolivia S.R.L. under a 30-year contract approved by AJAM (No. AJAM/DDSC/CAM/0010/2019, February 18, 2019), with continuous patent payments and active exploration dating back to 2013. Access is 180 km on paved highway from Santa Cruz city plus 5.5 km of gravel road.",
-      'The 2025 work program included soil prospection in the northern zone, tailings sampling using both manual methods and a CAT 320D2L excavator, trenching in the western and southern zones, and a diamond drilling program using an Ingetrol Explorer rig aimed at defining mineral reserves in the open-pit zone. The program is staffed by one resident geologist, a dedicated drill crew, three specialist consultant groups, and 10 field laborers — a team that recorded zero accidents in 2025.',
+      "Historical diamond drilling has confirmed a gold-bearing orogenic/mesothermal system hosted in greenstone, biotite schist, and muscovite schist, with mineralization controlled by northwest-southeast trending carbonate-quartz vein arrays dipping 45–90°. Three drilling campaigns have been completed: 2013 (13 holes, 1,371m), 2020–2021 (13 holes, 1,758m), and the ongoing 2025 program — totalling over 3,129 metres and 2,400+ assay samples analyzed by ALS Peru. Peak gold grades include intercepts of 12.95 g/t Au and 4.04 g/t Au in the 2020–2021 campaign, with multiple holes returning 1–4 g/t zones. Polymetallic assay suites confirm the presence of silver, copper, zinc, and lead alongside gold.",
+      'The 2025 work program targets reserve definition in the open-pit zone using an Ingetrol Explorer rig, supplemented by soil prospection in the north zone, tailings re-processing evaluation, and trenching in the southwest and south. The program is staffed by one resident geologist, a dedicated drill crew, three specialist consultant groups, and 10 field laborers — a team that recorded zero accidents in 2025.',
       'Environmental compliance is fully current. A Declaratoria de Impacto Ambiental (DIA No. 071103/02/DIA/5936/15) was obtained in February 2015, and annual water and air quality monitoring is conducted by PetroLab. The 10th Annual Environmental Monitoring Report (IMA 2024–2025) has been submitted to Bolivia\'s Ministry of Mining, Ministry of Environment, and the Santa Cruz Gobernación.',
     ],
     highlights: [
-      '275 ha under active 30-year AJAM contract (approved 2019)',
-      'Most advanced project — drilling for reserve definition in 2025',
-      'Continuous patent payments and field operations since 2013',
+      'Peak intercept: 12.95 g/t Au (CMB-017-2020) — multiple 1–4 g/t zones',
+      'Polymetallic deposit: Au · Ag · Cu · Zn · Pb confirmed by ALS Peru assays',
+      'Orogenic/mesothermal gold system — NW-SE carbonate-quartz vein arrays, 45–90° dip',
+      '3,129m drilled across 26 holes (2013, 2020–2021, 2025 ongoing)',
+      '275 ha under active 30-year AJAM contract — continuous operations since 2013',
+      '2025: Reserve definition drilling + tailings re-processing evaluation',
       'Full environmental permitting (DIA 2015) — 10 annual IMA reports filed',
-      '2025: Soil prospection, tailings sampling, trenching, diamond drilling',
       'Zero accidents recorded in 2025',
     ],
     documents: [
       'Informe Técnico — Los Clavillos (Período 2025)',
+      'Crown Mining Bolivia — Technical Report (Drill Results 2020–2021)',
       'Declaratoria de Impacto Ambiental (DIA No. 071103/02/DIA/5936/15)',
       'Informe de Monitoreo Ambiental IMA 2024–2025',
     ],
@@ -70,27 +86,29 @@ const PROJECT_DATA: Record<string, ProjectData> = {
   'cerrito-xxi': {
     name: 'Cerrito XXI',
     stage: 'Exploration',
-    commodities: ['Gold'],
+    commodities: ['Gold', 'Silver'],
     location: 'Concepción, Ñuflo de Chávez, Santa Cruz, Bolivia',
     department: 'Santa Cruz',
     stats: {
-      production: '~$365,649 USD Budget',
-      resources: '1,500 m Diamond Drill Program',
+      production: '~$365,649 USD',
+      resources: '1,500m Diamond Drill Program',
       area: '1,000 ha (40 cuadrículas)',
       since: 'LPE Application Pending',
     },
     description: [
-      'Cerrito XXI is a 1,000-hectare (40 cuadrículas) gold exploration concession held by Mycelium Minerals Bolivia MMB S.R.L. in the municipality of Concepción, Ñuflo de Chávez Province, Santa Cruz Department, Bolivia (unique code: 2058709). The property sits on the Brazilian Precambrian Shield within the Chiquitanía geological domain — a prolific terrain that hosts orogenic gold systems across the region. An LPE (Licencia de Prospección y Exploración) application is currently pending with Bolivian authorities.',
-      'The bedrock geology includes Precambrian metamorphic rocks of the Complejo Metamórfico de Concepción (gneisses and migmatites), intruded by granitic bodies of the Granitoides de Refugio, and locally overlain by the Grupo Tajibos sedimentary sequence (Formación Psamita de Zapocoz and Formación Esquisto de Laguna). Gold mineralization is interpreted as orogenic style, controlled by regional shear zones, quartz veins, and hydrothermal breccias — the same gold-forming environment that hosts significant deposits elsewhere in the Brazilian Shield.',
-      'The approved 5-year exploration program totals approximately $365,649 USD and proceeds in three phases: pre-field ASTER satellite imagery analysis, a systematic field campaign including 20-point soil sampling and geological mapping, and a 1,500-metre Ingetrol diamond drill program with approximately 2,700 laboratory analyses. The property is accessed via a 5-hour drive from Santa Cruz city through Pailón, San Julián, San Ramón, and San Javier (282 km).',
+      'Cerrito XXI is a 1,000-hectare (40 cuadrículas) gold and silver exploration concession held by Mycelium Minerals Bolivia MMB S.R.L. in the municipality of Concepción, Ñuflo de Chávez Province, Santa Cruz Department, Bolivia (unique code: 2058709). The property sits on the Brazilian Precambrian Shield within the Chiquitanía geological domain — a prolific terrain that hosts orogenic gold systems across the region. The concession is accessed via a 5-hour, 282 km paved highway drive from Santa Cruz through Pailón, San Julián, San Ramón, and San Javier. Elevation ranges from 460 to 800 m above sea level; the dry field season runs June through August (annual mean temperature 23–24°C). An LPE (Licencia de Prospección y Exploración) application is currently pending.',
+      'The bedrock geology includes Precambrian metamorphic rocks of the Complejo Metamórfico de Concepción (banded gneisses and migmatites with K-feldspar megacrysts up to 4 cm), intruded by the Granitoides de Refugio (foliated granites with blastomylonitic textures), and locally overlain by the Grupo Tajibos metasedimentary sequence (Formación Psamita de Zapocoz quartzites and Formación Esquisto de Laguna graphitic phyllites). A Tertiary laterite cap up to 40 m thick overlies portions of the concession. Gold mineralization is interpreted as orogenic style, controlled by regional shear zones, quartz veins, and hydrothermal breccias. The primary target metals are gold and silver; geochemical tracer elements anticipated include arsenic, antimony, tungsten, bismuth, and silver — consistent with orogenic gold systems globally. Amethyst has been identified at two quartz vein localities within the concession.',
+      'The approved 5-year exploration program totals approximately $365,649 USD across three phases: pre-field ASTER satellite imagery analysis for hydrothermal alteration mapping, a systematic 16–18 month field campaign including geological mapping, soil sampling at 27 grid points, trenching, and a 1,500-metre Ingetrol diamond drill program, followed by approximately 2,700 laboratory analyses at a certified laboratory.',
     ],
     highlights: [
-      '1,000 ha (40 cuadrículas) gold exploration concession — code 2058709',
-      'Brazilian Shield / Chiquitanía domain — proven orogenic gold setting',
-      'Host rocks: Complejo Metamórfico de Concepción (gneisses, migmatites, granites)',
-      '1,500-metre Ingetrol diamond drill program planned',
-      '5-year exploration budget: ~$365,649 USD',
-      'LPE application pending with Bolivian authorities',
+      '1,000 ha (40 cuadrículas) — code 2058709; gold and silver target',
+      'Brazilian Shield / Chiquitanía domain — proven orogenic gold-silver setting',
+      'Host rocks: Precambrian gneisses, Refuge granitoids, Tajibos metasediments',
+      'Tracer elements: Au, Ag, As, Sb, W, Bi — consistent with orogenic gold system',
+      'Amethyst identified at 2 quartz vein localities within concession',
+      'Tertiary laterite cap (up to 40m) — favorable supergene enrichment conditions',
+      '1,500m Ingetrol diamond drill program planned',
+      '5-year exploration budget: ~$365,649 USD — LPE pending',
     ],
     documents: [
       'Plan de Trabajo — Cerrito XXI (Mycelium Minerals Bolivia MMB S.R.L.)',
@@ -105,23 +123,25 @@ const PROJECT_DATA: Record<string, ProjectData> = {
     location: 'Concepción, Ñuflo de Chávez, Santa Cruz, Bolivia',
     department: 'Santa Cruz',
     stats: {
-      production: '~$372,709 USD Budget',
-      resources: '2,000 m Diamond Drill Program',
+      production: '~$372,709 USD',
+      resources: '2,000m Diamond Drill Program',
       area: '1,575 ha (63 cuadrículas)',
       since: 'LPE Application Pending',
     },
     description: [
-      'Cerrito XXII is a 1,575-hectare (63 cuadrículas) gold exploration concession held by Mycelium Minerals Bolivia MMB S.R.L. in the municipality of Concepción, Ñuflo de Chávez Province, Santa Cruz Department, Bolivia (unique code: 2058753) — the largest concession in the portfolio. Located immediately northwest of Cerrito XXI, it shares the same favorable Brazilian Shield geological setting and benefits from logistical and operational synergies with the sister concession. An LPE application is pending.',
-      'The bedrock geology of Cerrito XXII is more complex than its neighbor, comprising the Complejo Granulítico Lomas Maneches (Transamazónico cycle), the Complejo Gnéisico Chiquitanía, and the Supergrupo Esquistos San Ignacio. Of particular significance is a northwest-southeast trending brechiated quartz vein of Cretaceous age, approximately 4 km in length, intruded as Granitoide San Andrés — a direct structural target for orogenic gold. Quaternary alluvial deposits across the lower topography may also host secondary placer gold potential.',
-      'The 5-year exploration program totals approximately $372,709 USD, encompassing three phases: ASTER satellite pre-field analysis, systematic soil sampling at 20 priority points with geological mapping across the full 1,575 ha, and a 2,000-metre diamond drill program with approximately 3,200 laboratory analyses. The program is designed to mirror best practices at Cerrito XXI, maximizing efficiency across both concessions with shared equipment and personnel.',
+      'Cerrito XXII is a 1,575-hectare (63 cuadrículas) gold exploration concession held by Mycelium Minerals Bolivia MMB S.R.L. in the municipality of Concepción, Ñuflo de Chávez Province, Santa Cruz Department, Bolivia (unique code: 2058753) — the largest concession in the portfolio. Located immediately northwest of Cerrito XXI, it shares the same paved-highway access route (282 km, 5 hours from Santa Cruz), the same Chiquitano dry forest environment (460–800 m elevation, 23–24°C mean, dry field season June–August), and benefits from full logistical and equipment synergies with the adjacent concession. An LPE application is pending.',
+      'The geology of Cerrito XXII spans the full Precambrian chronostratigraphic column of the Brazilian Shield: from the Transamazónico Complejo Granulítico Lomas Maneches (the oldest basement rocks, >2 Ga), through the San Ignacio Complejo Gnéisico Chiquitanía (light grey banded gneiss-migmatites with pegmatite intrusives and abundant quartz veins 0.2–0.6 m thick, strongly fractured and shear-zone hosted), the Supergrupo Esquistos San Ignacio (La Dolorida muscovite schists, Zapocó amphibolite schists, and graphitic metapelites), and the Sunsas Granitoide San Andrés augengneis (porphyroblastic texture with K-feldspar phenocrysts up to 3 cm). Overlying these are Quaternary alluvial and fluvio-lacustrine sediments that represent a secondary placer gold exploration target.',
+      'Of particular significance is a Cretaceous brecciated quartz vein system trending NW–SE for approximately 4 km across the concession — angular, brown-reddish quartz with feldspathic phenocrysts, volcanic rock fragments, and Fe-oxide matrix, forming a direct structural target for gold. Primary gold mineralization is interpreted as orogenic style, controlled by shear zones, faults, and brittle-ductile deformation zones within the metamorphic basement. The 5-year program totals ~$372,709 USD, including ASTER pre-field analysis, systematic soil and trench sampling (20 priority points across 63 cuadrículas), and a 2,000-metre diamond drill program with ~3,200 certified laboratory analyses.',
     ],
     highlights: [
       '1,575 ha (63 cuadrículas) — largest concession in the portfolio, code 2058753',
-      'Cretaceous NW-SE brechiated quartz vein (~4 km) — direct gold drill target',
-      'Orogenic gold + secondary placer potential in Quaternary alluvials',
-      '2,000-metre diamond drill program planned (~3,200 lab samples)',
-      '5-year exploration budget: ~$372,709 USD',
-      'Operational synergies with adjacent Cerrito XXI concession',
+      '4 km NW-SE Cretaceous brecciated quartz vein — direct orogenic gold drill target',
+      'Full Brazilian Shield chronostratigraphy: granulites → gneisses → schists → granitoids',
+      'Orogenic gold (primary) + placer gold in Quaternary alluvials (secondary)',
+      'Shear-hosted gneiss complex with abundant 0.2–0.6 m quartz veins confirmed in field',
+      '2,000m diamond drill program planned — ~3,200 certified lab analyses',
+      '5-year exploration budget: ~$372,709 USD — operational synergies with Cerrito XXI',
+      'LPE application pending with Bolivian authorities (AJAM)',
     ],
     documents: [
       'Plan de Trabajo — Cerrito XXII (Mycelium Minerals Bolivia MMB S.R.L.)',
@@ -154,10 +174,10 @@ function ProjectDetailContent({ slug }: { slug: string }) {
   }
 
   const statsRows = [
-    { label: t('annualProduction'), value: project.stats.production },
-    { label: t('resources'), value: project.stats.resources },
-    { label: t('projectArea'), value: project.stats.area },
-    { label: t('operatingSince'), value: project.stats.since },
+    { label: project.statLabels?.production ?? t('annualProduction'), value: project.stats.production },
+    { label: project.statLabels?.resources ?? t('resources'), value: project.stats.resources },
+    { label: project.statLabels?.area ?? t('projectArea'), value: project.stats.area },
+    { label: project.statLabels?.since ?? t('operatingSince'), value: project.stats.since },
   ];
 
   return (

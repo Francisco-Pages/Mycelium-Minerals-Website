@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
+import { FadeInView } from '@/components/ui/FadeInView';
 
 export default async function NewsPage({
   params,
@@ -19,46 +20,46 @@ export default async function NewsPage({
 
 const NEWS = [
   {
-    date: 'February 18, 2025',
-    title: 'Mycelium Minerals Reports Record Q4 2024 Gold Production of 34,200 oz',
+    date: 'March 2025',
+    title: 'Mycelium Minerals Launches 2025 Diamond Drilling Campaign at Los Clavillos',
     excerpt:
-      'Fourth-quarter output surpassed guidance by 8%, driven by improved mill throughput at Cerro Blanco and Río Mulatos.',
-    slug: 'q4-2024-production-results',
+      'The Company has commenced its 2025 diamond drilling program at Los Clavillos, Bolivia, targeting high-grade gold mineralisation along the NW-SE carbonate-quartz vein corridor.',
+    slug: 'los-clavillos-2025-drill-program',
   },
   {
-    date: 'January 30, 2025',
-    title: 'Mycelium Minerals Closes $45M Credit Facility to Fund Expansion',
+    date: 'February 2025',
+    title: 'Mycelium Minerals Acquires 25,950 Hectares in Santa Cruz, Bolivia',
     excerpt:
-      'The revolving credit facility provides capital flexibility to advance the San Cristóbal Norte development program through 2026.',
-    slug: 'credit-facility-2025',
+      'Mycelium Minerals has expanded its Bolivian land package to 25,950 hectares with the addition of the Cerrito XXI and Cerrito XXII concessions in Ñuflo de Chávez Province.',
+    slug: 'concession-acquisition-2025',
   },
   {
-    date: 'January 9, 2025',
-    title: 'Mycelium Minerals Announces 2025 Production Guidance and Capital Budget',
+    date: 'January 2025',
+    title: 'Cerrito XXI and Cerrito XXII Work Plans Filed with AJAM',
     excerpt:
-      'The Company guides 120,000–130,000 oz Au equivalent for 2025, with a sustaining capital budget of $28M across all operating sites.',
-    slug: '2025-guidance',
+      'The Company has filed LPE work plans for its two new gold concessions, outlining a combined 3,500-metre drill program with a total approved budget of USD $738,358.',
+    slug: 'cerrito-work-plans-2025',
   },
   {
-    date: 'November 12, 2024',
-    title: 'Mycelium Minerals Releases Q3 2024 Financial Results',
+    date: 'December 2024',
+    title: 'Mycelium Minerals Closes Equity Round to Advance Bolivia Exploration Portfolio',
     excerpt:
-      'Third-quarter gold production of 31,400 oz Au and silver production of 458,000 oz Ag, tracking above full-year guidance.',
-    slug: 'q3-2024-results',
+      'The Company has secured a USD $1,000,000 equity raise to fund the 5,000-metre diamond drilling campaign across its three gold and silver concessions in Santa Cruz Department.',
+    slug: 'equity-raise-2024',
   },
   {
-    date: 'October 3, 2024',
-    title: 'Mycelium Minerals Expands San Cristóbal Norte Resource by 22%',
+    date: 'October 2024',
+    title: 'Historical Drill Results at Los Clavillos Confirm Peak Grade of 12.95 g/t Au',
     excerpt:
-      'Updated NI 43-101 resource estimate confirms Indicated silver resources of approximately 12 million ounces, a 22% increase over the prior estimate.',
-    slug: 'san-cristobal-resource-update-2024',
+      'A review of 26 historical drill holes totalling 3,129 metres at Los Clavillos returned peak intercepts of 12.95 g/t Au, supporting the polymetallic orogenic deposit thesis.',
+    slug: 'los-clavillos-historical-results-2024',
   },
   {
-    date: 'August 15, 2024',
-    title: 'Mycelium Minerals Completes Mill Expansion at Cerro Blanco',
+    date: 'September 2024',
+    title: 'Mycelium Minerals Signs Exploration Agreement with Crown Mining Bolivia S.R.L.',
     excerpt:
-      'The throughput expansion project was completed on schedule and budget, increasing processing capacity by 22% to approximately 3,200 tonnes per day.',
-    slug: 'cerro-blanco-mill-expansion-2024',
+      'The Company has formalised its operator agreement with Crown Mining Bolivia S.R.L. at the Los Clavillos concession under the existing 30-year AJAM extraction contract.',
+    slug: 'crown-mining-agreement-2024',
   },
 ] as const;
 
@@ -74,26 +75,35 @@ function NewsPageContent() {
       {/* Hero */}
       <section className="bg-offwhite border-b border-obsidian py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-mono uppercase tracking-widest text-gold mb-4">
-            {t('pressRelease')}
-          </p>
-          <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
-            {t('title')}
-          </h1>
-          <p className="mt-4 text-base text-obsidian/70 max-w-2xl leading-relaxed">
-            {t('subtitle')}
-          </p>
+          <FadeInView>
+            <p className="text-xs font-mono uppercase tracking-widest text-gold mb-4">
+              {t('pressRelease')}
+            </p>
+          </FadeInView>
+          <FadeInView delay={0.1}>
+            <h1 className="font-clash font-bold text-4xl sm:text-5xl md:text-7xl text-obsidian max-w-3xl leading-tight">
+              {t('title')}
+            </h1>
+          </FadeInView>
+          <FadeInView delay={0.2}>
+            <p className="mt-4 text-base text-obsidian/70 max-w-2xl leading-relaxed">
+              {t('subtitle')}
+            </p>
+          </FadeInView>
         </div>
       </section>
 
       {/* News Grid */}
       <section className="bg-white border-b border-obsidian">
         <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
-            <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
-              {t('allReleases')}
-            </h2>
-          </div>
+          <FadeInView>
+            <div className="flex items-end justify-between mb-10 pb-6 border-b border-obsidian">
+              <h2 className="font-clash font-bold text-4xl md:text-5xl text-obsidian">
+                {t('allReleases')}
+              </h2>
+            </div>
+          </FadeInView>
+          <FadeInView delay={0.1}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-obsidian">
             {NEWS.map((article) => (
               <article
@@ -122,6 +132,7 @@ function NewsPageContent() {
               </article>
             ))}
           </div>
+          </FadeInView>
         </div>
       </section>
     </div>
