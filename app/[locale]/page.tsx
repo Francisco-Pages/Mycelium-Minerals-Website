@@ -26,21 +26,21 @@ const PROJECTS = [
     title: 'Los Clavillos',
     stage: 'Exploration',
     commodities: ['Gold', 'Silver', 'Copper', 'Zinc', 'Lead'],
-    location: 'Ñuflo de Chávez, Santa Cruz',
+    location: 'Precambrian Shield, Bolivia',
     slug: 'los-clavillos',
   },
   {
     title: 'Cerrito XXI',
     stage: 'Exploration',
     commodities: ['Gold', 'Silver'],
-    location: 'Ñuflo de Chávez, Santa Cruz',
+    location: 'Precambrian Shield, Bolivia',
     slug: 'cerrito-xxi',
   },
   {
     title: 'Cerrito XXII',
     stage: 'Exploration',
     commodities: ['Gold'],
-    location: 'Ñuflo de Chávez, Santa Cruz',
+    location: 'Precambrian Shield, Bolivia',
     slug: 'cerrito-xxii',
   },
   {
@@ -71,7 +71,7 @@ const NEWS = [
     date: 'December 2024',
     title: 'Work Plans Filed for Cerrito XXI and Cerrito XXII Gold Concessions',
     excerpt:
-      '5-year exploration programs totaling approximately $738,000 USD have been submitted for the two new concessions in Concepción, Ñuflo de Chávez — including 1,500 m and 2,000 m diamond drill programs respectively.',
+      '5-year exploration programs totaling approximately $738,000 USD have been submitted for the two new concessions in Precambrian Shield, Bolivia — including 1,500 m and 2,000 m diamond drill programs respectively.',
     slug: 'cerrito-work-plans',
   },
 ] as const;

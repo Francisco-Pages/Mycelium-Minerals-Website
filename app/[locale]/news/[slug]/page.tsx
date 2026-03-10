@@ -183,7 +183,7 @@ function ArticleContent({ slug }: { slug: string }) {
             </p>
             <p className="text-sm text-obsidian/60 leading-relaxed">
               Mycelium Minerals Inc. is a gold and silver exploration company with three
-              concessions totalling 25,950 hectares in Bolivia's Ñuflo de Chávez Province, Santa Cruz
+              concessions totalling 25,950 hectares in Bolivia's Precambrian Shield and Andean mineral belts
               Department. The Company is advancing active drill programs at Los Clavillos and the Cerrito
               project area. Mycelium Minerals is committed to responsible exploration practices, community
               partnership, and transparent governance.

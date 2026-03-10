@@ -30,7 +30,7 @@ const NEWS = [
     date: 'February 2025',
     title: 'Mycelium Minerals Acquires 25,950 Hectares in Santa Cruz, Bolivia',
     excerpt:
-      'Mycelium Minerals has expanded its Bolivian land package to 25,950 hectares with the addition of the Cerrito XXI and Cerrito XXII concessions in Ñuflo de Chávez Province.',
+      'Mycelium Minerals has expanded its Bolivian land package to 25,950 hectares with the addition of the Cerrito XXI and Cerrito XXII concessions in Bolivia\'s Precambrian Shield and Andean mineral belts.',
     slug: 'concession-acquisition-2025',
   },
   {

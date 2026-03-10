@@ -54,11 +54,11 @@ const PHOTOS = [
   { src: '/images/gallery/ops-48.jpg', location: 'Cerrito XXII, Concepción', caption: 'Geological cross-section reference point.' },
   { src: '/images/gallery/ops-49.jpg', location: 'Cerrito XXII, Concepción', caption: 'Shear zone in gneiss complex.' },
   { src: '/images/gallery/ops-50.jpg', location: 'Cerrito XXII, Concepción', caption: 'Priority drill target — NW corridor.' },
-  { src: '/images/gallery/ops-51.jpg', location: 'Ñuflo de Chávez, Santa Cruz', caption: 'Regional landscape over the concession area.' },
-  { src: '/images/gallery/ops-52.jpg', location: 'Ñuflo de Chávez, Santa Cruz', caption: 'Bolivian Shield savanna terrain.' },
-  { src: '/images/gallery/ops-53.jpg', location: 'Ñuflo de Chávez, Santa Cruz', caption: 'Community liaison visit.' },
-  { src: '/images/gallery/ops-54.jpg', location: 'Ñuflo de Chávez, Santa Cruz', caption: 'Team debrief after field session.' },
-  { src: '/images/gallery/ops-55.jpg', location: 'Ñuflo de Chávez, Santa Cruz', caption: 'Sunset over the eastern Bolivia lowlands.' },
+  { src: '/images/gallery/ops-51.jpg', location: 'Precambrian Shield, Bolivia', caption: 'Regional landscape over the concession area.' },
+  { src: '/images/gallery/ops-52.jpg', location: 'Precambrian Shield, Bolivia', caption: 'Bolivian Shield savanna terrain.' },
+  { src: '/images/gallery/ops-53.jpg', location: 'Precambrian Shield, Bolivia', caption: 'Community liaison visit.' },
+  { src: '/images/gallery/ops-54.jpg', location: 'Precambrian Shield, Bolivia', caption: 'Team debrief after field session.' },
+  { src: '/images/gallery/ops-55.jpg', location: 'Precambrian Shield, Bolivia', caption: 'Sunset over the eastern Bolivia lowlands.' },
 ].map((p) => ({ ...p, alt: `${p.location} — ${p.caption}` }));
 
 export function GalleryGrid() {
