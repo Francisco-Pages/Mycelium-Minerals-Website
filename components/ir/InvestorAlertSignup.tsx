@@ -53,7 +53,7 @@ export function InvestorAlertSignup() {
         <button
           type="submit"
           disabled={loading}
-          className="px-8 py-3 bg-gold text-obsidian font-semibold text-sm border border-gold hover:bg-obsidian hover:text-white hover:border-obsidian transition-colors disabled:opacity-50"
+          className="px-8 py-3 bg-gold text-obsidian font-semibold text-sm border border-gold rounded-lg hover:bg-obsidian hover:text-white hover:border-obsidian transition-colors disabled:opacity-50"
         >
           {loading ? '...' : t('investorAlertCta')}
         </button>

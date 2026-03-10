@@ -88,7 +88,7 @@ export default function Header() {
           {/* IR CTA — desktop only */}
           <Link
             href={`/${locale}/investor-relations`}
-            className="hidden xl:inline-flex px-4 py-2 bg-gold text-obsidian font-semibold text-sm border border-gold hover:bg-obsidian hover:text-white hover:border-obsidian transition-colors whitespace-nowrap"
+            className="hidden xl:inline-flex px-4 py-2 bg-gold text-obsidian font-semibold text-sm border border-gold rounded-lg hover:bg-obsidian hover:text-white hover:border-obsidian transition-colors whitespace-nowrap"
           >
             {tc('investorPortal')}
           </Link>
@@ -136,7 +136,7 @@ export default function Header() {
               <Link
                 href={`/${locale}/investor-relations`}
                 onClick={closeMenu}
-                className="inline-flex px-5 py-2.5 bg-gold text-obsidian font-semibold text-sm border border-gold hover:bg-obsidian hover:text-white hover:border-obsidian transition-colors"
+                className="inline-flex px-5 py-2.5 bg-gold text-obsidian font-semibold text-sm border border-gold rounded-lg hover:bg-obsidian hover:text-white hover:border-obsidian transition-colors"
               >
                 {tc('investorPortal')}
               </Link>

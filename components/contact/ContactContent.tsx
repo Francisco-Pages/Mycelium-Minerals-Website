@@ -107,7 +107,7 @@ function ContactForm({ t }: { t: ReturnType<typeof useTranslations<'contact'>> }
         <button
           type="submit"
           disabled={status === 'loading' || status === 'success'}
-          className="self-start px-8 py-3 bg-obsidian text-white text-sm font-inter font-semibold border border-obsidian hover:bg-gold hover:border-gold transition-colors disabled:opacity-50 disabled:pointer-events-none"
+          className="self-start px-8 py-3 bg-obsidian text-white text-sm font-inter font-semibold border border-obsidian rounded-lg hover:bg-gold hover:border-gold transition-colors disabled:opacity-50 disabled:pointer-events-none"
         >
           {status === 'loading' ? 'Sending…' : t('send')}
         </button>

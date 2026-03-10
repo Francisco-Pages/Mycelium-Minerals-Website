@@ -16,11 +16,11 @@
   --font-inter: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, "Courier New", monospace;
 
-  /* Border radius — sharp corners by default */
+  /* Border radius — sharp everywhere except buttons */
   --radius: 0px;
   --radius-sm: 0px;
   --radius-md: 0px;
-  --radius-lg: 0px;
+  --radius-lg: 8px;
   --radius-xl: 0px;
   --radius-2xl: 0px;
   --radius-full: 0px;
@@ -35,12 +35,10 @@
   --text-sm--line-height: 1.5rem;
 }
 
-/* Remove default border radius from all interactive elements */
-button,
+/* Keep inputs and non-button elements sharp */
 input,
 select,
-textarea,
-[class*="rounded"] {
+textarea {
   border-radius: 0 !important;
 }
 
@@ -60,4 +58,26 @@ body {
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Topo pattern — section backgrounds only, via pseudo-element so child elements are unaffected */
+section.bg-white,
+section.bg-offwhite {
+  position: relative;
+}
+section.bg-white::before,
+section.bg-offwhite::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/topo-pattern.svg');
+  background-repeat: repeat;
+  background-size: 800px 800px;
+  pointer-events: none;
+  z-index: 0;
+}
+section.bg-white > *,
+section.bg-offwhite > * {
+  position: relative;
+  z-index: 1;
 }

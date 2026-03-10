@@ -37,7 +37,7 @@ const SIZE_CLASSES: Record<Size, string> = {
 };
 
 const BASE_CLASSES =
-  'inline-flex items-center justify-center font-inter font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:opacity-50 disabled:pointer-events-none';
+  'inline-flex items-center justify-center font-inter font-semibold transition-colors rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:opacity-50 disabled:pointer-events-none';
 
 export function Button({
   variant = 'primary',
