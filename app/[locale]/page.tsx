@@ -43,6 +43,13 @@ const PROJECTS = [
     location: 'Ñuflo de Chávez, Santa Cruz',
     slug: 'cerrito-xxii',
   },
+  {
+    title: 'Mycel Project',
+    stage: 'Exploration',
+    commodities: ['Silver', 'Gold', 'Zinc'],
+    location: 'Southwestern Bolivia',
+    slug: 'mycel-project',
+  },
 ] as const;
 
 const NEWS = [
@@ -546,10 +553,9 @@ function IRBand({ t }: { t: ReturnType<typeof useTranslations<'home'>> }) {
   return (
     <section className="bg-gold border-y border-obsidian">
       <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Stock ticker */}
+        {/* Company name */}
         <div className="flex items-baseline gap-4">
           <span className="font-inter font-bold text-3xl text-obsidian">{t('irBandTicker')}</span>
-          <span className="font-mono text-obsidian/50 text-lg">— C$—</span>
         </div>
 
         {/* Quick-access links */}

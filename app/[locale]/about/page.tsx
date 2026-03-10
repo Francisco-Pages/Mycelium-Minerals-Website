@@ -19,14 +19,29 @@ export default async function AboutPage({
 
 const EXECUTIVES = [
   {
-    name: 'Francisco Pages',
-    title: 'Chief Executive Officer',
-    bio: 'Founder and 49% shareholder of Mycelium Minerals Bolivia SRL. Has led the company since its establishment in Bolivia in 2011, overseeing the strategic acquisition of 25,950 hectares of mineral concessions across eastern Bolivia.',
+    name: 'Francisco Pagés',
+    title: 'President & CEO',
+    bio: 'Founder and 49% shareholder of Mycelium Minerals Bolivia SRL. Has led the company since its establishment in Bolivia in 2011, overseeing the strategic acquisition of 31,125 hectares of mineral concessions across Bolivia\'s Precambrian Shield and Andean mineral belts.',
   },
   {
-    name: 'Jeffery Zelinski',
-    title: 'VP Exploration',
-    bio: 'Geologist and equity option holder in Mycelium Minerals Bolivia SRL. Leads all exploration programs across the portfolio, including the planned 5,000-meter diamond drill campaign at the Concepción Project targeting a gold-bearing mineralized system.',
+    name: 'Jeff Zelinski',
+    title: 'Chief Geologist & Investor Relations',
+    bio: 'Geologist and equity option holder in Mycelium Minerals Bolivia SRL. Leads all exploration programs across the portfolio, including the 5,000-meter diamond drill campaign at the Concepción Project and surface evaluation of the Mycel Project.',
+  },
+  {
+    name: 'Lino Bracho',
+    title: 'Operations Manager',
+    bio: 'Oversees all field and site operations across Mycelium\'s active concessions in Bolivia, managing equipment deployment, personnel logistics, and execution of drilling and exploration programs.',
+  },
+  {
+    name: 'Aldo Inturias',
+    title: 'Finance Manager',
+    bio: 'Manages the financial administration and reporting of Mycelium Minerals Bolivia SRL, including regulatory compliance with Bolivian authorities and coordination with external auditors.',
+  },
+  {
+    name: 'Miguel Freites',
+    title: 'General Manager',
+    bio: 'Responsible for day-to-day management of Bolivian operations, stakeholder relations, and coordination between the technical team and corporate office.',
   },
 ] as const;
 
@@ -39,12 +54,12 @@ const BOARD = [
   {
     name: 'Patricia Nkrumah',
     title: 'Lead Independent Director',
-    bio: 'Senior partner at a leading Canadian law firm; extensive TSX governance and securities law expertise.',
+    bio: 'Senior partner at a leading Canadian law firm; extensive mining governance and securities law expertise.',
   },
   {
     name: 'François Lemaire',
     title: 'Independent Director',
-    bio: 'Former CFO of a major Quebec-based mining company; currently serves on three TSX-listed mining boards.',
+    bio: 'Former CFO of a major Quebec-based mining company; currently serves on three publicly listed mining boards.',
   },
   {
     name: 'Dr. Lucia Flores Mamani',

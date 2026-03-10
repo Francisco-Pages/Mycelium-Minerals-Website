@@ -179,6 +179,47 @@ const PROJECT_DATA: Record<string, ProjectData> = {
     ],
     primaryDocument: 'Plan de Trabajo — Cerrito XXII (Mycelium Minerals Bolivia MMB S.R.L.)',
   },
+  'mycel-project': {
+    name: 'Mycel Project',
+    stage: 'Exploration',
+    commodities: ['Silver', 'Gold', 'Zinc'],
+    location: 'Southwestern Bolivia',
+    department: 'Southwestern Bolivia',
+    stats: {
+      production: '~10,000 Samples',
+      resources: '5,175 ha',
+      area: '12 km NW-SE',
+      since: 'H2 2026',
+    },
+    statLabels: {
+      production: 'Phase I Geochemistry',
+      resources: 'Concession Area',
+      area: 'Structural Corridor',
+      since: 'Phase I Start',
+    },
+    description: [
+      'The Mycel Project is a district-scale exploration property located in southwestern Bolivia, within a highly prospective polymetallic and silver-gold mineral belt recognized for hosting significant epithermal and sediment-hosted mineral systems. The project consists of 5,175 hectares of 100% company-owned mining concessions, strategically positioned within an emerging exploration district and in proximity to a recent discovery announced by one of Bolivia\'s leading silver producers, highlighting the strong mineral endowment of the area.',
+      'Preliminary geological interpretations indicate favorable regional structural controls and host lithologies consistent with mineralized systems identified elsewhere in the district. The property remains largely underexplored using modern exploration techniques, providing significant discovery potential. A key structural feature is a 12 km NW-SE trending corridor interpreted from geological mapping and remote sensing — the primary exploration target for the Phase I program.',
+      'The addition of the Mycel Project further diversifies and strengthens Mycelium Minerals\' exploration portfolio, increasing the Company\'s exposure to silver-dominant polymetallic systems within a highly prospective geological district. The project lies within the same regional geological environment as several significant discoveries within the Bolivian Precambrian terrain, including deposits such as Puquio Norte, where exploration has outlined a multi-million-ounce gold system.',
+      'Disclosure: The technical information presented herein is based on preliminary exploration data and regional geological interpretation. A Qualified Person, as defined under NI 43-101, has not yet verified all historical or third-party information related to the property.',
+    ],
+    highlights: [
+      '5,175 ha — 100% company-owned, southwestern Bolivia',
+      'Silver-gold polymetallic belt — epithermal and sediment-hosted systems',
+      '12 km NW-SE structural corridor — primary drill target',
+      'Analogous setting to nearby multi-million-ounce gold and silver discoveries',
+      'Largely underexplored with modern techniques — significant discovery potential',
+      'Phase I (H2 2026): ~10,000 geochemical samples, trenching, portable XRF screening',
+      'Confirmation assays at internationally certified laboratories (QA/QC protocols)',
+      'Objective: define high-potential drill targets toward drill-ready exploration stage',
+    ],
+    documents: [
+      'Mycel Project — Regional Geological Interpretation',
+      'Phase I Exploration Program — Work Plan (H2 2026)',
+      'Structural Corridor Map — 12 km NW-SE Target Zone',
+    ],
+    primaryDocument: 'Phase I Exploration Program — Work Plan (H2 2026)',
+  },
 };
 
 // ---------------------------------------------------------------------------

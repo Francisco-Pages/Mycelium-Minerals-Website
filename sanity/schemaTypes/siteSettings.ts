@@ -15,8 +15,8 @@ export default defineType({
       name: 'exchange',
       title: 'Stock Exchange',
       type: 'string',
-      description: 'e.g. TSX',
-      initialValue: 'TSX',
+      description: 'e.g. NYSE',
+      initialValue: '',
     }),
     defineField({
       name: 'irEmail',

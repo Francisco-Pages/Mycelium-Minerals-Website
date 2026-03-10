@@ -41,6 +41,13 @@ const PROJECTS = [
     location: 'Ñuflo de Chávez, Santa Cruz',
     slug: 'cerrito-xxii',
   },
+  {
+    title: 'Mycel Project',
+    stage: 'Exploration',
+    commodities: ['Silver', 'Gold', 'Zinc'],
+    location: 'Southwestern Bolivia',
+    slug: 'mycel-project',
+  },
 ] as const;
 
 // ---------------------------------------------------------------------------
@@ -57,7 +64,7 @@ function ProjectsPageContent() {
         <div className="max-w-7xl mx-auto">
           <FadeInView>
             <p className="text-xs font-mono uppercase tracking-widest text-gold mb-4">
-              TSX: MYC · Bolivia
+              Gold · Silver · Bolivia
             </p>
           </FadeInView>
           <FadeInView delay={0.1}>

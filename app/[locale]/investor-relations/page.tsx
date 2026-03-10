@@ -23,13 +23,13 @@ export default async function InvestorRelationsPage({
 const FINANCIAL_HIGHLIGHTS = [
   {
     metric: 'Total Concession Area (ha)',
-    fy2024: '25,950',
-    fy2023: '2,850',
+    fy2024: '31,125',
+    fy2023: '25,950',
   },
   {
-    metric: 'Active Drill Programs',
-    fy2024: '1',
-    fy2023: '1',
+    metric: 'Active Projects',
+    fy2024: '4',
+    fy2023: '3',
   },
   {
     metric: 'Committed Exploration Budget (USD)',
@@ -37,8 +37,8 @@ const FINANCIAL_HIGHLIGHTS = [
     fy2023: '—',
   },
   {
-    metric: 'Capital Raise Target (USD)',
-    fy2024: '$1,000,000',
+    metric: 'Phase I Drill Program (Concepción)',
+    fy2024: '5,000m — Q2 2026',
     fy2023: '—',
   },
 ] as const;
@@ -90,7 +90,7 @@ function InvestorRelationsContent() {
         <div className="max-w-7xl mx-auto">
           <FadeInView>
             <p className="text-xs font-mono font-medium uppercase tracking-widest text-gold mb-4">
-              TSX: MYC
+              Gold &amp; Silver · Bolivia
             </p>
           </FadeInView>
           <FadeInView delay={0.1}>
@@ -121,10 +121,10 @@ function InvestorRelationsContent() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
             <div className="py-4 px-6 border-r border-obsidian/20">
               <p className="text-xs font-mono uppercase tracking-widest text-obsidian/50 mb-1">
-                {t('ticker')}
+                {t('concessionArea')}
               </p>
-              <p className="font-inter font-bold text-2xl text-obsidian">MYC</p>
-              <p className="text-xs font-mono text-obsidian/60 mt-1">{t('exchange')}: TSX</p>
+              <p className="font-inter font-bold text-2xl text-obsidian">25,950 ha</p>
+              <p className="text-xs font-mono text-obsidian/60 mt-1">Bolivia</p>
             </div>
             <div className="py-4 px-6 border-r border-obsidian/20">
               <p className="text-xs font-mono uppercase tracking-widest text-obsidian/50 mb-1">

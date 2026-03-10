@@ -4,10 +4,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
+import GoldSpotPrice from '@/components/ui/GoldSpotPrice';
 
 const NAV_LINKS = [
   { key: 'projects', href: '/projects' },
-  { key: 'investorRelations', href: '/investor-relations' },
   { key: 'gallery', href: '/gallery' },
   { key: 'about', href: '/about' },
   { key: 'sustainability', href: '/sustainability' },
@@ -46,7 +46,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop navigation */}
-        <nav className="hidden xl:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-4">
           {NAV_LINKS.map(({ key, href }) => (
             <Link
               key={key}
@@ -59,13 +59,9 @@ export default function Header() {
         </nav>
 
         {/* Right side: stock ticker + lang switcher + IR CTA + hamburger */}
-        <div className="flex items-center gap-3">
-          {/* Stock ticker placeholder */}
-          <span className="hidden xl:inline-flex items-center gap-2 font-mono text-xs border border-obsidian px-3 py-1">
-            <span className="text-obsidian/50">TSX:</span>
-            <span className="font-semibold">MYC</span>
-            <span className="text-obsidian/60">—</span>
-          </span>
+        <div className="flex items-center gap-2">
+          {/* Gold spot price */}
+          <GoldSpotPrice />
 
           {/* Language switcher */}
           <div className="flex items-center gap-1">
@@ -88,17 +84,17 @@ export default function Header() {
           {/* IR CTA — desktop only */}
           <Link
             href={`/${locale}/investor-relations`}
-            className="hidden xl:inline-flex px-4 py-2 bg-gold text-obsidian font-semibold text-sm border border-gold rounded-lg hover:bg-obsidian hover:text-white hover:border-obsidian transition-colors whitespace-nowrap"
+            className="hidden lg:inline-flex px-4 py-2 bg-gold text-obsidian font-semibold text-sm border border-gold rounded-lg hover:bg-obsidian hover:text-white hover:border-obsidian transition-colors whitespace-nowrap"
           >
             {tc('investorPortal')}
           </Link>
 
-          {/* Hamburger button — shown below xl */}
+          {/* Hamburger button — shown below lg */}
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
-            className="xl:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 text-obsidian"
+            className="lg:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 text-obsidian cursor-pointer rounded hover:bg-obsidian/10 transition-colors"
           >
             {isMenuOpen ? (
               /* X icon */
@@ -120,7 +116,7 @@ export default function Header() {
 
       {/* Mobile menu panel */}
       {isMenuOpen && (
-        <div className="xl:hidden bg-white border-t border-obsidian">
+        <div className="lg:hidden bg-white border-t border-obsidian">
           <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col">
             {NAV_LINKS.map(({ key, href }) => (
               <Link
